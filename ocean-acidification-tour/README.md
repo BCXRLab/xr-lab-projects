@@ -59,11 +59,11 @@ Ambient audio can be toggled from the HUD (on by default).
 
 ### 360 videos (Laura James, Room 5)
 
-On this hosted site, **Enter 360°** opens YouTube’s 360 player over the tour (compass in the upper left, drag to look). Tour buttons are hidden until you press **Esc** or **Exit 360°**.
+On this hosted site, **Enter 360°** opens YouTube’s **embed 360 player** (`youtube.com/embed/…`) as its own page — compass in the upper left, drag or WASD to look. That is not the regular watch page. **Browser Back** returns to this room.
 
-If a local 360 MP4 is present (local/dev), Enter 360 uses the in-tour sphere player instead.
+YouTube no longer sends the 360/MESH stream to an iframe sitting on GitHub Pages (you only get a flat video). Opening the embed player on youtube.com itself is what shows the compass.
 
-In a headset on this hosted site, use the in-tour sphere player when files exist; otherwise exit VR for the YouTube 360 fallback. PDFs, images, quotes, the art gallery, and the oyster model still work in VR.
+If a local 360 MP4 is present (`npm run dev`), Enter 360 uses the in-tour sphere player instead.
 
 ---
 
