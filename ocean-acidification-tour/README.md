@@ -59,7 +59,9 @@ Ambient audio can be toggled from the HUD (on by default).
 
 ### 360 videos (Laura James, Room 5)
 
-On this hosted site, **Enter 360°** hands the session to **YouTube’s own 360 player** (fullscreen). Tour buttons go away. Click and drag in the video to look around. Press **Esc** (or leave fullscreen) to return to the room.
+On this hosted site, **Enter 360°** opens the clip on **YouTube’s watch page** (not an embed). That is YouTube’s real 360 player: click and drag to look around. Use the **browser Back** button to return to this room.
+
+A YouTube *embed* on our page can only play/pause these 360 videos — it does not support drag-to-look. The watch page does.
 
 In a headset, exit VR first — YouTube 360 is desktop-only here. PDFs, images, quotes, the art gallery, and the oyster model still work in VR.
 
@@ -123,14 +125,14 @@ The live GitHub Pages site is **static**. It does not run a Node server, so it c
 
 ### 1. Hosted web (what this repo uses)
 
-Room 5 **Enter 360°** opens YouTube’s official 360 player in fullscreen (`youtube.com/embed/…`).
+Room 5 **Enter 360°** opens the official YouTube **watch page** (`youtube.com/watch?v=…`) in the same tab.
 
-- Look-around is YouTube’s click-and-drag
-- Exit is **Esc** / leave fullscreen (tour chrome is hidden while you are in the player)
+- Look-around is YouTube’s click-and-drag (embeds cannot do this)
+- Exit is the **browser Back** button (returns you to the same tour room)
 - No local MP4s and no stream proxy
 - Author clips with a YouTube URL and `"is360": true` in `room.json`
 
-This is the path meant for GitHub Pages.
+This is the path meant for GitHub Pages. A same-page embed only play/pauses 360 videos.
 
 ### 2. Optional: local 360 file on the room sphere
 
