@@ -59,14 +59,9 @@ Ambient audio can be toggled from the HUD (on by default).
 
 ### 360 videos (Laura James, Room 5)
 
-The preferred player maps a local equirectangular MP4 onto the room sphere so you can look around with the tour controls (and in VR). Those files are too large for GitHub, so this hosted site **falls back to YouTube 360**:
+On this hosted site, **Enter 360°** hands the session to **YouTube’s own 360 player** (fullscreen). Tour buttons go away. Click and drag in the video to look around. Press **Esc** (or leave fullscreen) to return to the room.
 
-1. Open **Salish Sea by Laura James**
-2. Choose a clip and press **Enter 360° experience**
-3. **Click the YouTube video**, then **drag** to look around
-4. **Esc** or **Exit 360°** returns to the room
-
-In a headset on this hosted site, exit VR and use desktop mode for those 360 clips. PDFs, images, quotes, the art gallery, and the oyster model still work in VR.
+In a headset, exit VR first — YouTube 360 is desktop-only here. PDFs, images, quotes, the art gallery, and the oyster model still work in VR.
 
 ---
 
@@ -116,9 +111,53 @@ Build for this GitHub Pages path:
 npx vite build --base /xr-lab-projects/ocean-acidification-tour/
 ```
 
-Copy the contents of `dist/` (including `content/` and `audio/`) into `ocean-acidification-tour/` on the `main` branch. Omit large local 360 MP4 masters; they exceed GitHub file limits.
+Copy the contents of `dist/` (including `content/` and `audio/`) into `ocean-acidification-tour/` on the `main` branch.
 
 WebXR requires **localhost** or **HTTPS**. GitHub Pages already provides HTTPS.
+
+---
+
+## YouTube playback options (maintainers)
+
+The live GitHub Pages site is **static**. It does not run a Node server, so it cannot proxy YouTube streams.
+
+### 1. Hosted web (what this repo uses)
+
+Room 5 **Enter 360°** opens YouTube’s official 360 player in fullscreen (`youtube.com/embed/…`).
+
+- Look-around is YouTube’s click-and-drag
+- Exit is **Esc** / leave fullscreen (tour chrome is hidden while you are in the player)
+- No local MP4s and no stream proxy
+- Author clips with a YouTube URL and `"is360": true` in `room.json`
+
+This is the path meant for GitHub Pages.
+
+### 2. Optional: local 360 file on the room sphere
+
+If you host an equirectangular MP4 yourself and point `sphereSrc` at it, a **local/dev** build can play that file on the panorama sphere. Look-around is then the tour’s own mouse / arrow controls (and it can work in VR).
+
+```json
+{
+  "title": "Scuba diving Keystone Jetty (360°)",
+  "src": "https://www.youtube.com/watch?v=G7OipoU16Qg",
+  "is360": true,
+  "sphereSrc": "/content/room_05_pacific_northwest/media/keystone-jetty-360.mp4"
+}
+```
+
+GitHub’s file limit is 100 MB, so the original 4K masters do not belong in this repo. Use a media host (Cloudflare R2, Bunny, college storage) with **HTTPS** and **CORS** for `https://bcxrlab.github.io` if you want this on the live site.
+
+### 3. Optional: world-space YouTube in VR (stream proxy)
+
+Flat YouTube clips on world-space panels in **WebXR** cannot use an iframe. The development app can resolve a progressive stream and paint it on a `THREE.VideoTexture`:
+
+- Vite plugin: `scripts/vrYtMiddleware.mjs`
+- Routes: `GET /api/vr-yt/:id` and `GET /api/vr-yt-proxy?u=…`
+- Client: `src/ui/vrMediaResolve.js` + `src/ui/VrMediaScreen.js`
+
+That plugin only runs with `npm run dev`. It is **not** on GitHub Pages. To use it in production you would need to host that proxy yourself (same origin or CORS), then point the client at it.
+
+On the hosted site, VR video panels tell the learner to **exit VR and watch on desktop**.
 
 ---
 
