@@ -1,0 +1,54 @@
+{
+  "id": 6,
+  "slug": "room_06_voices_of_action",
+  "title": "Voices of Action — Protectors of Marine Life",
+  "theme": "Community voices and marine conservation stories",
+  "panorama": "room_06_voices_of_action_360.jpg",
+  "status": "ready",
+  "navigation": { "prev": 5, "next": 7 },
+  "blocks": [
+    {
+      "type": "video-carousel",
+      "id": "voices-carousel",
+      "title": "Voices of Action",
+      "attribution": "Made possible by a grant from the Bellevue College Foundation.",
+      "items": [
+        {
+          "title": "What is Voices of Action?",
+          "src": "https://www.youtube.com/watch?v=YOthq_kP0l8",
+          "description": "Introduction to the Voices of Action project and its focus on marine protection.",
+          "captionsNote": "Captions available on YouTube (CC)."
+        },
+        {
+          "title": "Voices of Action — Protectors of Marine Life",
+          "src": "https://www.youtube.com/watch?v=iaigsXIbgBA",
+          "description": "Stories from people working to protect marine life and coastal communities.",
+          "captionsNote": "Captions available on YouTube (CC)."
+        },
+        {
+          "title": "Voices of Action — Bellevue College is Keeping Salmon Safe",
+          "src": "https://www.youtube.com/watch?v=y5zTsxJ4jD8",
+          "description": "How Bellevue College efforts support salmon safety and watershed health.",
+          "captionsNote": "Captions available on YouTube (CC)."
+        },
+        {
+          "title": "Voices of Action — Alexis Beard",
+          "src": "https://www.youtube.com/watch?v=qzaxJfG1YT8&t=585s",
+          "description": "Alexis Beard shares experience and advocacy related to marine and environmental action.",
+          "captionsNote": "Captions available on YouTube (CC)."
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "voices-hotspot",
+      "label": "Voices of Action",
+      "type": "video-carousel",
+      "blockId": "voices-carousel"
+    }
+  ],
+  "media": [],
+  "documents": [],
+  "notes": "Former Room 8. Reordered carousel per client email; grant attribution required (2026-06-18)."
+}

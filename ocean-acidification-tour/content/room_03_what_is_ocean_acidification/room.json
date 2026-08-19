@@ -1,0 +1,58 @@
+{
+  "id": 3,
+  "slug": "room_03_what_is_ocean_acidification",
+  "title": "What is Ocean Acidification?",
+  "theme": "Intro video and OA chemistry interactives",
+  "panorama": "room_03_what_is_ocean_acidification_360.jpg",
+  "status": "ready",
+  "navigation": {
+    "prev": 2,
+    "next": 4
+  },
+  "blocks": [
+    {
+      "type": "video",
+      "id": "intro-video",
+      "title": "What is Ocean Acidification",
+      "src": "https://www.youtube.com/watch?v=CyStQ-x2XpU",
+      "description": "Short introduction to ocean acidification: how extra CO₂ changes ocean chemistry and why that matters for marine life.",
+      "captionsNote": "Captions available on YouTube (CC)."
+    },
+    {
+      "type": "video-carousel",
+      "id": "oa-chemistry",
+      "title": "Ocean Acidification Chemistry",
+      "items": [
+        {
+          "title": "Ocean Acidification",
+          "embedUrl": "https://scratch.mit.edu/projects/1189371193/embed",
+          "description": "Interactive Scratch demo of OA chemistry: CO₃²⁻ + Ca²⁺ → CaCO₃ vs CO₃²⁻ + H⁺ → HCO₃⁻. Desktop / exit immersive only.",
+          "credits": "Katelyn Pedersen and Eileen Singov",
+          "aspectRatio": "485 / 402"
+        },
+        {
+          "title": "The Chemistry Behind Ocean Acidification",
+          "embedUrl": "https://bellevuec.sharepoint.com/teams/VoicesofActionMini-ConferenceNov122025/_layouts/15/embed.aspx?UniqueId=dace4c2b-4509-4b93-9c4a-703e18fb883b&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create",
+          "description": "SharePoint Stream presentation on the chemistry behind ocean acidification. Desktop / exit immersive only."
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "intro-video-hotspot",
+      "label": "What is Ocean Acidification",
+      "type": "video",
+      "blockId": "intro-video"
+    },
+    {
+      "id": "oa-chemistry-hotspot",
+      "label": "OA Chemistry",
+      "type": "video-carousel",
+      "blockId": "oa-chemistry"
+    }
+  ],
+  "media": [],
+  "documents": [],
+  "notes": "Room 3 — two hotspots only (intro video + chemistry carousel). Layout: 11 & 1 o'clock."
+}

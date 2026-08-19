@@ -1,0 +1,16 @@
+{
+  "sourcePdf": "my-first-fish-future-of-the-ocean.pdf",
+  "note": "page-03.png removed (duplicate of page-04 with audio UI chrome). VR carousel uses room.json pageImages.",
+  "pageCount": 9,
+  "pages": [
+    { "pageNumber": 1, "image": "documents/pages/page-01.png", "title": "Page 1", "file": "page-01.png" },
+    { "pageNumber": 2, "image": "documents/pages/page-02.png", "title": "Page 2", "file": "page-02.png" },
+    { "pageNumber": 3, "image": "documents/pages/page-04.png", "title": "Page 3", "file": "page-04.png" },
+    { "pageNumber": 4, "image": "documents/pages/page-05.png", "title": "Page 4", "file": "page-05.png" },
+    { "pageNumber": 5, "image": "documents/pages/page-06.png", "title": "Page 5", "file": "page-06.png" },
+    { "pageNumber": 6, "image": "documents/pages/page-07.png", "title": "Page 6", "file": "page-07.png" },
+    { "pageNumber": 7, "image": "documents/pages/page-08.png", "title": "Page 7", "file": "page-08.png" },
+    { "pageNumber": 8, "image": "documents/pages/page-09.png", "title": "Page 8", "file": "page-09.png" },
+    { "pageNumber": 9, "image": "documents/pages/page-10.png", "title": "Page 9", "file": "page-10.png" }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": 5,
+  "slug": "room_05_pacific_northwest",
+  "title": "Ocean Acidification in the Pacific Northwest",
+  "theme": "Regional impacts, oyster scans, and OA chemistry",
+  "panorama": "room_05_pacific_northwest_360.jpg",
+  "status": "ready",
+  "navigation": { "prev": 4, "next": 6 },
+  "blocks": [
+    {
+      "type": "video-carousel",
+      "id": "pnw-oa-videos",
+      "title": "Ocean Acidification in the PNW",
+      "items": [
+        {
+          "title": "Ocean Acidification... in a nutshell",
+          "src": "https://www.youtube.com/watch?v=d0kacyyLVB4",
+          "description": "Quick overview of ocean acidification and why it matters for coastal ecosystems.",
+          "captionsNote": "Captions available on YouTube (CC)."
+        },
+        {
+          "title": "Richard Feely, Ocean Acidity",
+          "src": "https://www.youtube.com/watch?v=yDsUZho8dos",
+          "description": "NOAA scientist Richard Feely explains changing ocean chemistry and regional impacts.",
+          "captionsNote": "Captions available on YouTube (CC)."
+        }
+      ]
+    },
+    {
+      "type": "video-carousel",
+      "id": "salish-sea-360",
+      "title": "Salish Sea by Laura James",
+      "items": [
+        {
+          "title": "Scuba diving Keystone Jetty (360°)",
+          "src": "https://www.youtube.com/watch?v=G7OipoU16Qg",
+          "is360": true,
+          "sphereSrc": "/content/room_05_pacific_northwest/media/keystone-jetty-360.mp4",
+          "credits": "Laura James — Scuba diving Keystone Jetty #360video with narration",
+          "description": "Underwater 360° view of Keystone Jetty habitat with narration. Arrow keys / right mouse to look · Esc to exit.",
+          "captionsNote": "Captions available on YouTube (CC) when watching the source video."
+        },
+        {
+          "title": "VSS Cove (360°)",
+          "is360": true,
+          "sphereSrc": "/content/room_05_pacific_northwest/media/vss-cove-360.mp4",
+          "credits": "Laura James — VSS Cove #360video with narration",
+          "description": "Underwater 360° view of VSS Cove with narration about local marine habitat. Arrow keys / right mouse to look · Esc to exit."
+        }
+      ]
+    },
+    {
+      "type": "oyster-viewer",
+      "id": "oyster-scans",
+      "title": "Pacific Northwest Oysters",
+      "viewer": {
+        "distance": 0.76,
+        "types": [
+          {
+            "id": "willapa-bay",
+            "label": "Willapa Bay Oyster",
+            "closed": "models/willapa-bay-closed.glb",
+            "top": "models/willapa-bay-top-internals.glb",
+            "bottom": "models/willapa-bay-bottom.glb"
+          },
+          {
+            "id": "nisqually-sweet",
+            "label": "Nisqually Sweet Oyster",
+            "closed": "models/nisqually-sweet-closed.glb",
+            "top": "models/nisqually-sweet-top-internals.glb",
+            "bottom": "models/nisqually-sweet-bottom.glb"
+          },
+          {
+            "id": "large-pacific",
+            "label": "Large Pacific Oyster",
+            "closed": "models/large-pacific-closed.glb",
+            "top": "models/large-pacific-top-internals.glb",
+            "bottom": "models/large-pacific-bottom.glb"
+          }
+        ],
+        "initialType": "willapa-bay"
+      },
+      "notes": "Three oyster types from the Pacific Northwest. View closed shells or split to compare top (internals) and bottom."
+    },
+    {
+      "type": "image",
+      "id": "oa-chemistry-image",
+      "title": "OA Chemistry",
+      "src": "media/oa-chemistry.png",
+      "alt": "Diagram of ocean acidification chemistry showing carbon dioxide dissolving into seawater and reactions that affect shell-building marine life.",
+      "caption": "Ocean acidification chemistry diagram. Oyster anatomy labels: Hamahama Oysters anatomy guide.",
+      "linkUrl": "https://hamahamaoysters.com/pages/oyster-anatomy",
+      "panelScale": 1.875
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "pnw-oa-videos-hotspot",
+      "label": "Ocean Acidification in the PNW",
+      "type": "video-carousel",
+      "blockId": "pnw-oa-videos"
+    },
+    {
+      "id": "salish-sea-360-hotspot",
+      "label": "Salish Sea by Laura James",
+      "type": "video-carousel",
+      "blockId": "salish-sea-360"
+    },
+    {
+      "id": "oyster-model",
+      "label": "Oyster Scans",
+      "type": "oyster-viewer",
+      "blockId": "oyster-scans"
+    },
+    {
+      "id": "oa-chemistry-image-hotspot",
+      "label": "OA Chemistry",
+      "type": "text",
+      "blockId": "oa-chemistry-image"
+    }
+  ],
+  "media": [],
+  "documents": [],
+  "notes": "Pacific Northwest room: oyster comparison viewer plus ocean acidification videos."
+}

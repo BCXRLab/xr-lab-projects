@@ -1,0 +1,62 @@
+{
+  "id": 7,
+  "slug": "room_07_student_artwork",
+  "title": "Inspiring Artwork by Students",
+  "theme": "Student art gallery — ocean, climate, and coral themes",
+  "panorama": "room_07_student_artwork_360.jpg",
+  "status": "ready",
+  "navigation": { "prev": 6, "next": 8 },
+  "blocks": [
+    {
+      "type": "gallery",
+      "id": "student-art",
+      "title": "Student Artwork",
+      "items": [
+        {
+          "title": "2018",
+          "artist": "Sangmin Lee",
+          "year": 2018,
+          "alt": "Painting of a heating Earth under rising temperatures, with melting ice, storms, wildfire, and heat affecting living creatures.",
+          "description": "Undoubtedly, our planet's temperature keeps rising; icebergs melting, massive storms occurring more often, the number of wildfires is increasing, and the heat waves are becoming a part of our weather. These environmental changes affect negatively to all living creatures on Earth, including humans. If we don't significantly reduce the heat, our plant will have a massive collapse.",
+          "image": "media/sangmin-lee-global-warming-2018.jpg"
+        },
+        {
+          "title": "GLOBAL WARMING",
+          "artist": "Sangmin Lee",
+          "year": 2017,
+          "alt": "Dynamic-angle painting of a melting umbrella as Earth flooding a landscape of fossils, including human remains.",
+          "description": "As a result of this fact, I have expressed my anxiety about the future environment aggressively through painting; using dynamic angles. In which I caused a flood from a melting umbrella, that figuratively showed our planet, earth, and fossils, including human fossils, that floated around the flooded area.",
+          "image": "media/sangmin-lee-global-warming-2017.jpg"
+        },
+        {
+          "title": "Ocean, sea, beach…",
+          "artist": "Sangmin Lee",
+          "year": 2017,
+          "month": "December",
+          "alt": "Artwork of coral bleaching: a person with burn-like injuries beside a head covered in corals shifting from living color to white.",
+          "description": "Sea creatures have been one of my inspirations. I am still amazed by their colors, shapes, and how they interact with each other. Unfortunately, I may not be able to see them anymore in 5 years time because coral bleaching is a serious risk. Corals are also animals, which means they can feel pain like we do.\n\nTo express this message, I have depicted a coral bleaching event showing a person suffering with burns, and created a head with corals that show the bleaching process.",
+          "image": "media/sangmin-lee-ocean-bleach-2017.jpg"
+        },
+        {
+          "title": "Salish Sea Rose",
+          "artist": "Erinn Gelina S. Abesamis",
+          "year": 2019,
+          "alt": "Painting of a rose-like form in blues and greens suggesting the Salish Sea.",
+          "description": "Student artwork linking the Salish Sea to a rose form in cool ocean colors.",
+          "image": "media/salish-sea-rose.png"
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "art-gallery",
+      "label": "Student Art Gallery",
+      "type": "gallery",
+      "blockId": "student-art"
+    }
+  ],
+  "media": [],
+  "documents": [],
+  "notes": "Student artwork gallery. Includes Salish Sea Rose by Erinn Gelina S. Abesamis (2019)."
+}

@@ -1,0 +1,809 @@
+{
+  "version": 1,
+  "types": {
+    "willapa-bay": {
+      "closed": [
+        {
+          "id": "lbl-closed-ms6ktcc4-9qqk",
+          "text": "Umbo",
+          "color": "#f5f5f5",
+          "position": [
+            -0.15335079956722433,
+            0.15019436685233556,
+            0.0005109958523993319
+          ],
+          "normal": [
+            -0.5960355438711661,
+            0.5180225130038226,
+            0.6135098258898611
+          ],
+          "textOffset": 0.085,
+          "showLeader": true,
+          "pinScale": 0.7,
+          "pinOpacity": 0.75,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-closed-ms6kv0p1-kzcy",
+          "text": "Hinge",
+          "color": "#f5f5f5",
+          "position": [
+            -0.13377545534092797,
+            0.13323991189775916,
+            -0.008159046152585323
+          ],
+          "normal": [
+            -0.06573693421611684,
+            -0.004518704500720588,
+            0.9978267569019691
+          ],
+          "textOffset": 0.13,
+          "showLeader": true,
+          "pinScale": 0.6,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-closed-ms6kxfcj-w2fl",
+          "text": "Fringe",
+          "color": "#f5f5f5",
+          "position": [
+            0.18053366527956333,
+            -0.037974453014488374,
+            0.10287519001280024
+          ],
+          "normal": [
+            0.04884557979279191,
+            -0.3745966870258563,
+            0.9259003355674729
+          ],
+          "textOffset": 0.13,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        }
+      ],
+      "top": [
+        {
+          "id": "lbl-top-ms6l5ing-hrte",
+          "text": "Umbo",
+          "color": "#f5f5f5",
+          "position": [
+            0.15289424675337648,
+            0.10089342566960094,
+            -0.03751275895019292
+          ],
+          "normal": [
+            -0.46961409543726496,
+            0.7478385657365327,
+            0.46925481453445433
+          ],
+          "textOffset": 0.13,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6l5z9p-dr7r",
+          "text": "Hinge",
+          "color": "#f5f5f5",
+          "position": [
+            0.11425111487010213,
+            0.0733361841109782,
+            -0.04136381440617699
+          ],
+          "normal": [
+            -0.22014521154416683,
+            0.4741341556779793,
+            0.8524862979858995
+          ],
+          "textOffset": 0.13,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6l6bj7-0tya",
+          "text": "Belly",
+          "color": "#f5f5f5",
+          "position": [
+            0.014693421222876705,
+            0.0140315026092992,
+            -0.00886389679078348
+          ],
+          "normal": [
+            -0.011929153507846527,
+            0.6893245507543646,
+            0.7243544429517084
+          ],
+          "textOffset": 0.11,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6l6vv4-7zzj",
+          "text": "Gills",
+          "color": "#f5f5f5",
+          "position": [
+            -0.05644602169280977,
+            -0.06527988073393957,
+            0.04267482894646257
+          ],
+          "normal": [
+            -0.11012225818776944,
+            0.8735716896290394,
+            0.47407340289272887
+          ],
+          "textOffset": 0.12596600639691619,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6l776p-7y2r",
+          "text": "Mantle",
+          "color": "#ffffff",
+          "position": [
+            -0.09183521612991798,
+            0.04240644802643167,
+            -0.0848666162106193
+          ],
+          "normal": [
+            0.12058005746472449,
+            0.4868682693960307,
+            0.8651125579929573
+          ],
+          "textOffset": 0.11,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6mhsra-la5b",
+          "text": "Adductor Muscle",
+          "color": "#f5f5f5",
+          "position": [
+            -0.08305674037687118,
+            -0.02014043189768994,
+            -0.016642225481999555
+          ],
+          "normal": [
+            -0.5719149874555479,
+            0.46924675963585644,
+            0.6728452464682867
+          ],
+          "textOffset": 0.17043260818516864,
+          "showLeader": true,
+          "pinScale": 0.85,
+          "pinOpacity": 0.45,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6or25f-pb8b",
+          "text": "Fringe",
+          "color": "#f5f5f5",
+          "position": [
+            -0.104414945057887,
+            -0.08808612745389854,
+            0.12059421798389558
+          ],
+          "normal": [
+            -0.2230503662079631,
+            -0.6450826810624463,
+            0.7308329964689471
+          ],
+          "textOffset": 0.11,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        }
+      ],
+      "bottom": [
+        {
+          "id": "lbl-bottom-ms6oskm4-bdvh",
+          "text": "Hinge",
+          "color": "#f5f5f5",
+          "position": [
+            0.1614803825005078,
+            0.02996666390334224,
+            0.008898962036095023
+          ],
+          "normal": [
+            0.3905994982849476,
+            0.9174206992728127,
+            0.07596902319584475
+          ],
+          "textOffset": 0.125,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-bottom-ms6osvo7-wyid",
+          "text": "Fringe",
+          "color": "#f5f5f5",
+          "position": [
+            -0.18352615058477958,
+            0.019039918158537887,
+            -0.03780836375120101
+          ],
+          "normal": [
+            -0.9410591975738635,
+            0.13943949031239405,
+            -0.3081626440746125
+          ],
+          "textOffset": 0.125,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-bottom-ms6otb24-jv8q",
+          "text": "Adductor Muscle Attachment",
+          "color": "#f5f5f5",
+          "position": [
+            -0.04077851786127101,
+            0.015910794949695717,
+            0.029609909398449197
+          ],
+          "normal": [
+            -0.06444582061516409,
+            0.9878557319866239,
+            0.14137817719298032
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        }
+      ]
+    },
+    "nisqually-sweet": {
+      "closed": [
+        {
+          "id": "lbl-closed-ms6p7rgx-pafk",
+          "text": "Umbo",
+          "color": "#f5f5f5",
+          "position": [
+            0.15058554014023928,
+            0.06104076229358948,
+            -0.0853214644187693
+          ],
+          "normal": [
+            0.620452349803319,
+            0.22802695889620997,
+            -0.7503616379054079
+          ],
+          "textOffset": 0.18,
+          "showLeader": true,
+          "pinScale": 0.65,
+          "pinOpacity": 0.75,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-closed-ms6p86oh-zihw",
+          "text": "Hinge",
+          "color": "#f5f5f5",
+          "position": [
+            0.1544676061271607,
+            0.051516076572090196,
+            -0.06614398022544331
+          ],
+          "normal": [
+            0.8578194174135197,
+            -0.05402368398024707,
+            -0.5111039900817953
+          ],
+          "textOffset": 0.18,
+          "showLeader": true,
+          "pinScale": 0.55,
+          "pinOpacity": 0.75,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-closed-ms6p8uvr-9m74",
+          "text": "Fringe",
+          "color": "#f5f5f5",
+          "position": [
+            -0.1286780109993178,
+            -0.06293554215286924,
+            0.09335498840898217
+          ],
+          "normal": [
+            -0.655167659183371,
+            -0.10080730649871104,
+            0.7487277377769954
+          ],
+          "textOffset": 0.18,
+          "showLeader": true,
+          "pinScale": 0.55,
+          "pinOpacity": 0.75,
+          "textOpacity": 1
+        }
+      ],
+      "top": [
+        {
+          "id": "lbl-top-ms6pbw2j-si6m",
+          "text": "Hinge",
+          "color": "#f5f5f5",
+          "position": [
+            0.023710255057165654,
+            -0.06406128310248292,
+            0.21936894356916292
+          ],
+          "normal": [
+            0.09156042757495954,
+            0.9609187865774578,
+            0.2612504042193941
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6pc1ao-vr5i",
+          "text": "Fringe",
+          "color": "#f5f5f5",
+          "position": [
+            0.0684266331674702,
+            0.10699272320091513,
+            -0.21486518905129712
+          ],
+          "normal": [
+            0.6692949846541492,
+            0.7416306285042661,
+            -0.045035923229901305
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6pc9nz-y1c5",
+          "text": "Umbo",
+          "color": "#f5f5f5",
+          "position": [
+            0.03563736820162201,
+            -0.0811052902949779,
+            0.2360613265632169
+          ],
+          "normal": [
+            0.17290634992887327,
+            0.19121786540319005,
+            0.96619828301696
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6pclbm-l4l0",
+          "text": "Belly",
+          "color": "#f5f5f5",
+          "position": [
+            0.009697632424986682,
+            0.015331489689675022,
+            0.09874714111266325
+          ],
+          "normal": [
+            0.22282535955777572,
+            0.9438562438186924,
+            0.24389393215579883
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6pcpce-5dfx",
+          "text": "Adductor Muscle",
+          "color": "#f5f5f5",
+          "position": [
+            -0.05055564603875384,
+            0.035963934465776067,
+            0.009385445064565403
+          ],
+          "normal": [
+            -0.2816976924807674,
+            0.8084644937226406,
+            0.5167509772035321
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6pd0ld-bd26",
+          "text": "Gills",
+          "color": "#f5f5f5",
+          "position": [
+            0.0011666696466181349,
+            0.05246037677707105,
+            -0.08741020927182963
+          ],
+          "normal": [
+            -0.0224590585698988,
+            0.9531084939911698,
+            0.30179428319641577
+          ],
+          "textOffset": 0.21644070957543685,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6pd9tm-3p5d",
+          "text": "Mantle",
+          "color": "#f5f5f5",
+          "position": [
+            0.08485044813238239,
+            0.04219887832211833,
+            -0.05833971334106646
+          ],
+          "normal": [
+            0.7911130325400676,
+            0.5459423326987481,
+            0.2758389731577243
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        }
+      ],
+      "bottom": [
+        {
+          "id": "lbl-bottom-ms6p9ko0-fnnn",
+          "text": "Adductor Muscle Attachment",
+          "color": "#f5f5f5",
+          "position": [
+            0.023038708596632533,
+            -0.002859003611225042,
+            -0.023118175931330143
+          ],
+          "normal": [
+            0.038822082099972795,
+            0.8927726301410439,
+            0.4488316798226989
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-bottom-ms6pa2ih-tjiw",
+          "text": "Hinge",
+          "color": "#f5f5f5",
+          "position": [
+            0.048369833296066395,
+            -0.08378126972597205,
+            0.19524994850157662
+          ],
+          "normal": [
+            0.3494821151252556,
+            0.57386341680851,
+            0.7406369083811851
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-bottom-ms6paeov-3ygb",
+          "text": "Fringe",
+          "color": "#f5f5f5",
+          "position": [
+            -0.07902990444043166,
+            0.14255790044725464,
+            -0.16787689195659258
+          ],
+          "normal": [
+            -0.06330701107689042,
+            0.7392168603076117,
+            -0.6704853881968402
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        }
+      ]
+    },
+    "large-pacific": {
+      "closed": [
+        {
+          "id": "lbl-closed-ms6p5n0i-vgsn",
+          "text": "Umbo",
+          "color": "#f5f5f5",
+          "position": [
+            -0.20210082211047797,
+            0.18887801738914942,
+            -0.0130217440750866
+          ],
+          "normal": [
+            -0.07275097564891603,
+            0.5420157500306074,
+            0.8372133672253979
+          ],
+          "textOffset": 0.18,
+          "showLeader": true,
+          "pinScale": 0.7,
+          "pinOpacity": 0.75,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-closed-ms6p63uf-g3u0",
+          "text": "Hinge",
+          "color": "#f5f5f5",
+          "position": [
+            -0.18109386605800196,
+            0.1603711515842574,
+            -0.027836303728014697
+          ],
+          "normal": [
+            0.40554968259785956,
+            -0.03556832663818289,
+            0.913380725155143
+          ],
+          "textOffset": 0.18,
+          "showLeader": true,
+          "pinScale": 0.7,
+          "pinOpacity": 0.75,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-closed-ms6p6eun-d4d5",
+          "text": "Fringe",
+          "color": "#f5f5f5",
+          "position": [
+            0.2313711687991829,
+            -0.07415102095561536,
+            0.18911705103310636
+          ],
+          "normal": [
+            -0.6418807701331065,
+            0.1456581416540616,
+            0.7528431328658153
+          ],
+          "textOffset": 0.18,
+          "showLeader": true,
+          "pinScale": 0.7,
+          "pinOpacity": 0.75,
+          "textOpacity": 1
+        }
+      ],
+      "top": [
+        {
+          "id": "lbl-top-ms6pe8im-nkrz",
+          "text": "Umbo",
+          "color": "#f5f5f5",
+          "position": [
+            -0.04924346748033971,
+            -0.02857389772144914,
+            0.2217911788315861
+          ],
+          "normal": [
+            -0.23042446587858945,
+            0.8401884492371013,
+            0.49090522027487327
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6pedfx-lwsc",
+          "text": "Fringe",
+          "color": "#f5f5f5",
+          "position": [
+            0.057312717030000286,
+            0.18632123952236612,
+            -0.23168001674961133
+          ],
+          "normal": [
+            0.3974812019674898,
+            0.2894333871971795,
+            -0.8707680566362362
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6peyu0-5ag7",
+          "text": "Hinge",
+          "color": "#f5f5f5",
+          "position": [
+            -0.042585295938255656,
+            -0.04022749387244605,
+            0.21027012320275396
+          ],
+          "normal": [
+            -0.2818595453851707,
+            0.7950287227928533,
+            -0.5371075559044293
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6pw30b-sux4",
+          "text": "Belly",
+          "color": "#f5f5f5",
+          "position": [
+            -0.0009009530668179012,
+            -0.028602936830627985,
+            0.023393892688907018
+          ],
+          "normal": [
+            -0.1424099502528714,
+            0.9423210784528323,
+            0.30290327032316067
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6pwbsa-ff2k",
+          "text": "Adductor Muscle",
+          "color": "#f5f5f5",
+          "position": [
+            0.012355302639692728,
+            0.02460048769222279,
+            -0.08073890330764191
+          ],
+          "normal": [
+            0.11290447805961494,
+            0.9853083885406718,
+            0.12814038514641068
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6pwpe6-ei0f",
+          "text": "Mantle",
+          "color": "#f5f5f5",
+          "position": [
+            0.11549837757312165,
+            0.03672817887283554,
+            -0.10651386784730602
+          ],
+          "normal": [
+            -0.12663385211162487,
+            0.7135357744087705,
+            0.6890795063983891
+          ],
+          "textOffset": 0.175,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-top-ms6pxmqh-hfio",
+          "text": "Gills",
+          "color": "#f5f5f5",
+          "position": [
+            -0.032734028474326375,
+            0.05320462137936687,
+            -0.15916171182793204
+          ],
+          "normal": [
+            -0.002252925074279391,
+            0.7808330800696667,
+            0.6247356444109201
+          ],
+          "textOffset": 0.19,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        }
+      ],
+      "bottom": [
+        {
+          "id": "lbl-bottom-ms6p9vbf-evup",
+          "text": "Adductor Muscle Attachment",
+          "color": "#f5f5f5",
+          "position": [
+            0.012109119805442539,
+            0.05958017455693487,
+            -0.026114428900183347
+          ],
+          "normal": [
+            -0.187104977146458,
+            0.8384447292848698,
+            0.5118614690142685
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-bottom-ms6paoj9-p0ns",
+          "text": "Hinge",
+          "color": "#f5f5f5",
+          "position": [
+            -0.20461046053898357,
+            -0.05018339259799105,
+            0.14330183405495145
+          ],
+          "normal": [
+            -0.8885882100187352,
+            0.21785308408828813,
+            0.4036719296271687
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        },
+        {
+          "id": "lbl-bottom-ms6pavrs-pp0o",
+          "text": "Fringe",
+          "color": "#f5f5f5",
+          "position": [
+            0.15474848147842704,
+            0.05592657115468148,
+            -0.17803772590005792
+          ],
+          "normal": [
+            0.5231698009270993,
+            0.5646152486694731,
+            -0.6383596011401478
+          ],
+          "textOffset": 0.265,
+          "showLeader": true,
+          "pinScale": 0.9,
+          "pinOpacity": 0.5,
+          "textOpacity": 1
+        }
+      ]
+    }
+  }
+}

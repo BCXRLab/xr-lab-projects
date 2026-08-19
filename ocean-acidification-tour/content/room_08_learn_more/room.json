@@ -1,0 +1,43 @@
+{
+  "id": 8,
+  "slug": "room_08_learn_more",
+  "title": "To Learn More",
+  "theme": "Further resources and external experiences",
+  "panorama": "room_08_learn_more_360.jpg",
+  "status": "ready",
+  "navigation": { "prev": 7, "next": null },
+  "blocks": [
+    {
+      "type": "video",
+      "id": "learn-more-video",
+      "title": "To Learn More",
+      "src": "https://www.youtube.com/watch?v=aGGBGcjdjXA",
+      "description": "Closing video pointing learners toward further study and action on ocean acidification and marine life.",
+      "captionsNote": "Captions available on YouTube (CC)."
+    },
+    {
+      "type": "link",
+      "id": "lost-cities",
+      "title": "Lost Cities: A Story of Coral",
+      "description": "An interactive journey into the hidden lives of corals and the surprising ways their world—and fate—is interwoven with ours.",
+      "url": "http://lostcities.org/"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "learn-more-video-hotspot",
+      "label": "To Learn More Video",
+      "type": "video",
+      "blockId": "learn-more-video"
+    },
+    {
+      "id": "lost-cities-link",
+      "label": "Lost Cities: A Story of Coral",
+      "type": "link",
+      "blockId": "lost-cities"
+    }
+  ],
+  "media": [],
+  "documents": [],
+  "notes": "Former Room 11 — final room in the 8-room tour (2026-06-18)."
+}

@@ -1,0 +1,102 @@
+{
+  "id": 2,
+  "slug": "room_02_why_care",
+  "title": "Why Care?",
+  "theme": "Why we should care about the ocean — shellfish industry in Washington",
+  "panorama": "room_02_why_care_360.jpg",
+  "status": "ready",
+  "navigation": {
+    "prev": 1,
+    "next": 3
+  },
+  "blocks": [
+    {
+      "type": "document",
+      "id": "shellfish-industry",
+      "title": "Shellfish Industry in Washington",
+      "src": "documents/my-first-fish-future-of-the-ocean.pdf",
+      "format": "pdf",
+      "pageImages": [
+        { "image": "documents/pages/page-01.png", "title": "Page 1", "pageNumber": 1 },
+        { "image": "documents/pages/page-02.png", "title": "Page 2", "pageNumber": 2 },
+        { "image": "documents/pages/page-04.png", "title": "Page 3", "pageNumber": 3 },
+        { "image": "documents/pages/page-05.png", "title": "Page 4", "pageNumber": 4 },
+        { "image": "documents/pages/page-06.png", "title": "Page 5", "pageNumber": 5 },
+        { "image": "documents/pages/page-07.png", "title": "Page 6", "pageNumber": 6 },
+        { "image": "documents/pages/page-08.png", "title": "Page 7", "pageNumber": 7 },
+        { "image": "documents/pages/page-09.png", "title": "Page 8", "pageNumber": 8 },
+        { "image": "documents/pages/page-10.png", "title": "Page 9", "pageNumber": 9 }
+      ],
+      "a11yTranscript": [
+        {
+          "heading": "My First Fish & the Future of the Ocean",
+          "text": "By Caiden, Ryan & Tristan – 6/9/25"
+        },
+        {
+          "heading": "A first fish",
+          "text": "Story about catching my first fish to start and how that started my love for the ocean."
+        },
+        {
+          "heading": "A risk to future memories",
+          "text": "Now, people in the future having those great memories is at risk because of something called ocean acidification."
+        },
+        {
+          "heading": "What is ocean acidification?",
+          "text": "Ocean acidification happens when excess carbon dioxide from human activities dissolves in seawater. This lowers the ocean's pH, which makes it more acidic. Over time, this subtle shift can have massive effects on marine wildlife that rely on the stable chemical conditions to thrive."
+        },
+        {
+          "heading": "Clownfish and sense of smell",
+          "text": "Take a clownfish, for example. These fish aren't just in Hollywood, they are also highly attuned to their environment. They rely on their sense of smell to detect predators, find food, and choose a safe habitat. However, in waters with a lower pH, their sense of smell is impaired. Studies show that acidified conditions confuse the chemical signals clownfish use to detect danger. Instead of swimming away from predators, now some clownfish swim right toward them."
+        },
+        {
+          "heading": "Dungeness crabs and sensory bristles",
+          "text": "It's not just clownfish being impacted. Dungeness crabs, a key species in the fishing industry and ecosystems, are also left vulnerable. They have tiny bristles, called mechanoreceptors, to sense their surroundings and find their way around the ocean floor. These bristles can detect changes in pressure and water movement, which helps the crab find food and avoid predators. These lower pH levels weaken these bristles and leave the crab unable to feel anything with them."
+        },
+        {
+          "heading": "A shared challenge",
+          "text": "Clownfish and Dungeness crabs are very different, but their struggles under acidified waters show a shared challenge: trying to adapt to an ocean rapidly undergoing chemical change."
+        },
+        {
+          "heading": "What researchers are studying",
+          "text": "Researchers around the world are studying these effects to understand how acidification changes behavior, development, and survival rates in marine life. For clownfish, they look at the neurological pathways disrupted by acidic water. For Dungeness crabs, they are seeing how it affects shell formation and sensory organ development."
+        },
+        {
+          "heading": "Wider ecosystem and economy impacts",
+          "text": "The implications of ocean acidification go much further than just individual species. Clownfish play a large role in maintaining coral reef health by eating small species that would otherwise overpopulate. Dungeness crabs are vital to food webs and support local fishing economies. Their decline could be the end of entire ecosystems."
+        },
+        {
+          "heading": "Hope and action",
+          "text": "But there is hope. Reducing CO2 emissions through renewable energy and conservation efforts can help slow this down. Every step toward reducing our carbon footprint contributes to a healthier ocean."
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "id": "thioro-lo-voices",
+      "title": "Thioro Lo — Voices of Action",
+      "src": "https://www.youtube.com/shorts/jGXgNQZTSSs",
+      "description": "Student voice on protecting marine life and why ocean acidification matters locally.",
+      "captionsNote": "Captions available on YouTube (CC) when provided by the uploader.",
+      "credits": "Thioro Lo Ocea101 Voices of Action Spring 2027"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "shellfish-doc",
+      "label": "Shellfish Industry in Washington",
+      "type": "document",
+      "blockId": "shellfish-industry"
+    },
+    {
+      "id": "thioro-lo-voices-hotspot",
+      "label": "Thioro Lo — Voices of Action",
+      "type": "video",
+      "blockId": "thioro-lo-voices"
+    }
+  ],
+  "media": [],
+  "documents": [
+    "documents/my-first-fish-future-of-the-ocean.pdf"
+  ],
+  "notes": "Room 2 — Why Care. PDF hotspot + Thioro Lo Voices of Action YouTube Short (flat video, not in-repo)."
+}

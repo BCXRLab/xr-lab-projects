@@ -1,0 +1,37 @@
+{
+  "id": 4,
+  "slug": "room_04_ocean_acidification_worldwide",
+  "title": "Ocean Acidification Worldwide",
+  "theme": "Global OA impacts — critical threshold for marine life",
+  "panorama": "room_04_ocean_acidification_worldwide_360.jpg",
+  "status": "ready",
+  "navigation": {
+    "prev": 3,
+    "next": 5
+  },
+  "blocks": [
+    {
+      "type": "video",
+      "id": "ocean-acidity-threshold",
+      "title": "Ocean Acidity Critical Threshold",
+      "src": "https://www.youtube.com/watch?v=jIHqhmrpsng",
+      "startSeconds": 599,
+      "endSeconds": 746,
+      "description": "Ocean acidity has just crossed a critical threshold for marine life. Clip from World Economic Forum coverage.",
+      "captionsNote": "Captions available on YouTube (CC).",
+      "credits": "World Economic Forum — ocean acidity critical threshold segment from \"What's Next for Humanitarianism & Ocean Acidity Crosses Safe Limit | WEF | Top Stories of the Week\".",
+      "sourceUrl": "https://www.weforum.org/videos/ocean-acidity-has-just-crossed-a-critical-threshold-for-marine-life/"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "ocean-acidity-threshold",
+      "label": "Ocean Acidity Critical Threshold",
+      "type": "video",
+      "blockId": "ocean-acidity-threshold"
+    }
+  ],
+  "media": [],
+  "documents": [],
+  "notes": "Room 4 — single 12 o'clock video. YouTube clip start=599s (9:59) end=746s (12:26, rounds 12:25.5 up; YouTube uses whole seconds only)."
+}

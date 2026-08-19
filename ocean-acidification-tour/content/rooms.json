@@ -1,0 +1,15 @@
+{
+  "title": "Oceanography",
+  "subtitle": "Ocean Acidification — Guided Experience",
+  "version": "0.3.0-eight-room-flow",
+  "rooms": [
+    { "id": 1, "slug": "room_01_start_here", "config": "room_01_start_here/room.json" },
+    { "id": 2, "slug": "room_02_why_care", "config": "room_02_why_care/room.json" },
+    { "id": 3, "slug": "room_03_what_is_ocean_acidification", "config": "room_03_what_is_ocean_acidification/room.json" },
+    { "id": 4, "slug": "room_04_ocean_acidification_worldwide", "config": "room_04_ocean_acidification_worldwide/room.json" },
+    { "id": 5, "slug": "room_05_pacific_northwest", "config": "room_05_pacific_northwest/room.json" },
+    { "id": 6, "slug": "room_06_voices_of_action", "config": "room_06_voices_of_action/room.json" },
+    { "id": 7, "slug": "room_07_student_artwork", "config": "room_07_student_artwork/room.json" },
+    { "id": 8, "slug": "room_08_learn_more", "config": "room_08_learn_more/room.json" }
+  ]
+}

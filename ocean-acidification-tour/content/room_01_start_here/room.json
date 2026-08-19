@@ -1,0 +1,31 @@
+{
+  "id": 1,
+  "slug": "room_01_start_here",
+  "title": "Start Here",
+  "theme": "Introduction — oceans, Pacific Coast, and Puget Sound",
+  "panorama": "room_01_start_here_360_hq_match.jpg",
+  "status": "ready",
+  "navigation": {
+    "prev": null,
+    "next": 2
+  },
+  "blocks": [
+    {
+      "type": "quote",
+      "id": "opening-quote",
+      "text": "Our oceans are the cradle of life. They are the planet's workhorse. Their sheer size drives the planet's climate, produces more than half of the oxygen we breathe, and absorbs tens of millions of tons of CO2 a day as it has since the advent of the Industrial Revolution, making the rest of the planet a more pleasant place to live. Our daily lives, no matter our proximity, are tied directly to oceans – the air we breathe, the food we eat, the rain that falls, the products we use, all come from or are transported by oceans.\n\nHere the Pacific Coast waters and Puget Sound are our economic engines, central to our cultural heritage and are places of beauty and respite for the millions who live here. Even at the farthest inland reaches of the watersheds, we are deeply connected with the vast salt water of the state.",
+      "attribution": "Ocean Acidification: From Knowledge to Action — Washington State's Strategic Response"
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "quote-panel",
+      "label": "Opening Message",
+      "type": "text",
+      "blockId": "opening-quote"
+    }
+  ],
+  "media": [],
+  "documents": [],
+  "notes": "Room 1: hq_match (stable). Skybox AI test rejected. UltraSharp 4k/8k and SD attempts rejected as blurry mess. Videos untouched."
+}
