@@ -34,8 +34,8 @@
 <body>
   <iframe
     id="yt"
-    width="560"
-    height="315"
+    width="640"
+    height="360"
     title="YouTube 360 video player"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
@@ -45,7 +45,8 @@
     const id = new URLSearchParams(location.search).get('v') || '';
     if (/^[\w-]{11}$/.test(id)) {
       document.getElementById('yt').src =
-        'https://www.youtube.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+        'https://www.youtube.com/embed/' + encodeURIComponent(id) +
+        '?autoplay=1&rel=0&enablejsapi=1&origin=' + encodeURIComponent(location.origin);
     }
   </script>
 </body>
