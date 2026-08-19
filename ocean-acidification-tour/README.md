@@ -57,15 +57,16 @@ Ambient audio can be toggled from the HUD (on by default).
 | Close a panel | Panel **×** |
 | Move between rooms | Room navigation on the HUD / in-world title |
 
-### Videos in VR on this hosted site
+### 360 videos (Laura James, Room 5)
 
-YouTube and other embedded players **do not play inside immersive VR** on GitHub Pages (there is no local video-stream server).
+The preferred player maps a local equirectangular MP4 onto the room sphere so you can look around with the tour controls (and in VR). Those files are too large for GitHub, so this hosted site **falls back to YouTube 360**:
 
-If you are in a headset and open a video panel, you will see a note:
+1. Open **Salish Sea by Laura James**
+2. Choose a clip and press **Enter 360° experience**
+3. **Click the YouTube video**, then **drag** to look around
+4. **Esc** or **Exit 360°** returns to the room
 
-> This video plays in desktop mode. Exit VR and return to the desktop browser to watch.
-
-Leave the immersive session, then play the same hotspot on desktop. PDFs, images, quotes, the art gallery, and the oyster model still work in VR.
+In a headset on this hosted site, exit VR and use desktop mode for those 360 clips. PDFs, images, quotes, the art gallery, and the oyster model still work in VR.
 
 ---
 

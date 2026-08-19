@@ -42,10 +42,12 @@
         },
         {
           "title": "VSS Cove (360°)",
+          "src": "https://www.youtube.com/watch?v=cJ3Nl5h4Sn8",
           "is360": true,
           "sphereSrc": "/content/room_05_pacific_northwest/media/vss-cove-360.mp4",
           "credits": "Laura James — VSS Cove #360video with narration",
-          "description": "Underwater 360° view of VSS Cove with narration about local marine habitat. Arrow keys / right mouse to look · Esc to exit."
+          "description": "Underwater 360° view of VSS Cove with narration about local marine habitat. Arrow keys / right mouse to look · Esc to exit.",
+          "captionsNote": "Captions available on YouTube (CC) when watching the source video."
         }
       ]
     },
