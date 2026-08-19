@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XR Math Plot</title>
+    <script type="module" crossorigin src="/xr-lab-projects/xr-math-plot/assets/index-ByaXVUVU.js"></script>
+    <link rel="stylesheet" crossorigin href="/xr-lab-projects/xr-math-plot/assets/index-Dr3DBHox.css">
+  </head>
+  <body>
+    <div id="ui">
+      <header>
+        <h1>XR Math Plot</h1>
+        <p class="subtitle">Parametric 3D curves in the browser and VR</p>
+      </header>
+      <div id="segments"></div>
+      <div class="actions">
+        <button type="button" id="add-segment">+ Segment</button>
+        <button type="button" id="plot-curve" class="primary">Plot curve</button>
+        <button type="button" id="ride-path">Ride vehicle</button>
+        <button type="button" id="free-fly">Free fly</button>
+      </div>
+      <label class="toggle-row">
+        <input type="checkbox" id="toggle-scale-numbers" checked />
+        Show axis scale numbers
+      </label>
+      <div id="grid-cube-panel" class="grid-cube-panel">
+        <div class="grid-cube-header">
+          <span class="grid-cube-title">Grid Cube</span>
+          <span id="grid-cube-scale-label" class="grid-cube-scale-label">1.00×</span>
+        </div>
+        <canvas id="grid-cube-canvas" width="220" height="220" aria-label="Grid Cube scene scale preview"></canvas>
+        <p class="grid-cube-hint">Drag toward or away from center to resize the scene</p>
+        <button type="button" id="grid-cube-reset" class="grid-cube-reset">Reset scale</button>
+      </div>
+      <p id="status" aria-live="polite"></p>
+      <p id="hint">
+        WASD move · Shift sprint · Space/Ctrl up/down · Hold RMB look ·
+        <kbd>V</kbd> toggle vehicle · <kbd>Esc</kbd> reset movement
+      </p>
+    </div>
+    <!-- Lightweight VR menu only (full #ui HTMLMesh freezes Quest). -->
+    <div id="vr-panel" class="vr-panel" aria-hidden="true">
+      <h2 class="vr-panel-title">XR Math Plot</h2>
+      <p class="vr-panel-note">Edit equations on desktop. Plot or ride here.</p>
+      <pre id="vr-segment-summary" class="vr-segment-summary"></pre>
+      <div class="vr-panel-actions">
+        <button type="button" id="vr-plot" class="primary">Plot curve</button>
+        <button type="button" id="vr-ride">Ride vehicle</button>
+        <button type="button" id="vr-close-panel">Close panel</button>
+      </div>
+      <p id="vr-panel-status" class="vr-panel-status"></p>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div id="vr-entry" class="vr-entry">
+      <button type="button" id="vr-enable" aria-label="Enable VR">
+        <svg class="vr-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            fill="currentColor"
+            d="M4 8.5A3.5 3.5 0 0 1 7.5 5h9A3.5 3.5 0 0 1 20 8.5v3.2a2.8 2.8 0 0 1-2.8 2.8h-1.1l-1.6 2.1a1 1 0 0 1-1.6 0l-1.6-2.1H7.8A2.8 2.8 0 0 1 5 11.7V8.5zm3.5-2.5A1.5 1.5 0 0 0 6 7.5v4.2c0 .99.81 1.8 1.8 1.8h1.5c.38 0 .74.18.97.49l1.28 1.68 1.28-1.68c.23-.31.59-.49.97-.49h1.5c.99 0 1.8-.81 1.8-1.8V7.5A1.5 1.5 0 0 0 16.5 6h-9z"
+          />
+        </svg>
+      </button>
+      <span id="vr-tooltip" class="vr-tooltip" role="tooltip">Enable VR</span>
+      <p id="vr-toast" class="vr-toast" hidden>No VR detected</p>
+    </div>
+  </body>
+</html>
