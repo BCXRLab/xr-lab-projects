@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebXR Accessibility Design</title>
+    <meta
+      name="description"
+      content="Interactive Three.js / WebXR lab demonstrating accessibility features for VR applications in desktop and immersive modes."
+    />
+    <script type="module" crossorigin src="/xr-lab-projects/webxr-accessibility-design/assets/index-WZhsUv3S.js"></script>
+    <link rel="stylesheet" crossorigin href="/xr-lab-projects/webxr-accessibility-design/assets/index-DDPaZiEX.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#a11y-panel">Skip to accessibility settings</a>
+
+    <div id="hud" role="region" aria-label="Session status">
+      <div id="status">Starting…</div>
+      <div id="hints">
+        <strong>Desktop:</strong> hold <em>right-click</em> look · WASD move · Q/E turn ·
+        click stations to interact<br />
+        <strong>VR:</strong> <em>Enter VR</em> · left stick move · right stick snap turn ·
+        trigger select
+      </div>
+    </div>
+
+    <!-- Screen-reader only — never a visible second text box -->
+    <div
+      id="live-region"
+      class="sr-only"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+
+    <!-- Single visible subtitle bar (stations + voice briefing lines) -->
+    <div
+      id="captions"
+      class="captions"
+      role="region"
+      aria-label="Captions"
+      hidden
+    >
+      <span id="caption-text"></span>
+    </div>
+
+    <aside id="a11y-panel" class="a11y-panel" aria-label="Accessibility settings">
+      <header class="a11y-panel__header">
+        <h1>Accessibility Lab</h1>
+        <p class="a11y-panel__sub">
+          Toggle features · walk the room · try the same settings in VR
+        </p>
+      </header>
+      <div id="a11y-controls" class="a11y-panel__body"></div>
+      <footer class="a11y-panel__footer a11y-panel__footer--stack">
+        <button type="button" id="play-briefing" class="btn">
+          Play voice briefing
+        </button>
+        <div class="a11y-panel__footer-row">
+          <button type="button" id="reset-a11y" class="btn btn--secondary">Reset defaults</button>
+          <button type="button" id="announce-nearby" class="btn btn--secondary">
+            Announce in view
+          </button>
+        </div>
+      </footer>
+    </aside>
+
+    <div id="vr-entry" class="vr-entry" aria-label="Virtual reality controls"></div>
+
+  </body>
+</html>

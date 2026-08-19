@@ -10,5 +10,6 @@ A collection of immersive learning, XR, VR, AR, and interactive projects develop
 |---------|-----------|
 | [Wing Chun: Siu Nim Tau](./wing-chun/) | [Open](https://bcxrlab.github.io/xr-lab-projects/wing-chun/) |
 | [XR Math Plot](./xr-math-plot/) | [Open](https://bcxrlab.github.io/xr-lab-projects/xr-math-plot/) |
+| [WebXR Accessibility Design](./webxr-accessibility-design/) | [Open](https://bcxrlab.github.io/xr-lab-projects/webxr-accessibility-design/) |
 
 Each project folder is a static site served by GitHub Pages from this repository.
