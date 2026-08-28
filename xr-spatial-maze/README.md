@@ -18,7 +18,24 @@ An engineering instructor asked for a tool that would help students:
 - Hold a **virtual space** in memory after they have walked it
 - Build **spatial understanding** of layouts — components, architecture, or any schematic they will later have to imagine
 
-You explore a maze at human scale, then you must recognize that same maze as a small model among look-alikes. The loop is short, repeatable, and works in a browser or a headset.
+You explore a maze at human scale, then you must recognize that same maze as a small model among look-alikes. The loop is short, repeatable, and works on **web, desktop, mobile, and VR** from one HTTPS URL.
+
+---
+
+## Devices and platforms
+
+One link: [https://bcxrlab.github.io/xr-lab-projects/xr-spatial-maze/](https://bcxrlab.github.io/xr-lab-projects/xr-spatial-maze/)
+
+| Device | How you play | Notes |
+|--------|----------------|-------|
+| **Web (browser)** | Open the live site | Static GitHub Pages. No install. HTTPS is required for VR. |
+| **Desktop** (Windows, macOS, Linux) | Chrome or Edge | WASD, mouse look, click world panels. Best place to learn the loop. |
+| **Laptop** | Same as desktop | Trackpad: hold right-click (or two-finger click) to look. |
+| **Mobile** (phone) | Chrome | Left stick to move, swipe to look, tap panels. Compact HUD. |
+| **Tablet** | Chrome | Same as mobile; more screen for the maze. |
+| **VR headset** (Meta Quest Browser, other WebXR browsers) | Open the **same URL**, tap **Enter VR** | Left stick walk, right stick turn, trigger to select, A/X teleport. |
+
+**Recommended:** Chrome or Edge on a computer, or Quest Browser in the headset. Safari and Firefox can show the 3D maze, but **Enter VR** is most reliable in Chromium-based browsers.
 
 ---
 
@@ -27,7 +44,7 @@ You explore a maze at human scale, then you must recognize that same maze as a s
 ### Open the experience
 
 1. Visit the [live site](https://bcxrlab.github.io/xr-lab-projects/xr-spatial-maze/) over **HTTPS** (required for VR).
-2. Use a current Chromium browser (Chrome, Edge, or the Meta Quest browser).
+2. Pick the device you have (table above).
 3. Stand on the start platform and pick **Level 1**, **2**, or **3**.
 
 This folder is the published site. You do not need Node or Unity to play it on GitHub Pages.
