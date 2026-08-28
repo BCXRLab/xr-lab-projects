@@ -12,6 +12,6 @@ A collection of immersive learning, XR, VR, AR, and interactive projects develop
 | [XR Math Plot](./xr-math-plot/) | [Open](https://bcxrlab.github.io/xr-lab-projects/xr-math-plot/) |
 | [WebXR Accessibility Design](./webxr-accessibility-design/) | [Open](https://bcxrlab.github.io/xr-lab-projects/webxr-accessibility-design/) |
 | [Ocean Acidification Tour](./ocean-acidification-tour/) | [Open](https://bcxrlab.github.io/xr-lab-projects/ocean-acidification-tour/) |
-| [XR Spatial Maze](./xr-spatial-maze/) | [Open](https://bcxrlab.github.io/xr-lab-projects/xr-spatial-maze/) — web, desktop, mobile, VR |
+| [XR Spatial Maze](./xr-spatial-maze/) | [Open](https://bcxrlab.github.io/xr-lab-projects/xr-spatial-maze/) |
 
 Each project folder is a static site served by GitHub Pages from this repository.
