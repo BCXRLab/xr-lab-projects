@@ -1,0 +1,76 @@
+{
+  "room": "cotton-club",
+  "proximityRadius": 1.8,
+  "source": "sketchfab-screenshots-user-2026-09-09",
+  "note": "1 PianoLP Strange Fruit Lyrics; 2 stage far side (trumpet) Strange Fruit video; 3 upstairs LP_Metal_0 table by stairs Langston Hughes. (LP group was wrongly used for #2 — it is the whole upstairs deck.)",
+  "hotspots": [
+    {
+      "id": "strange-fruit-lyrics",
+      "title": "Strange Fruit Lyrics",
+      "position": null,
+      "kind": "link",
+      "body": "A Library of Congress essay on the song Strange Fruit and its place in American recording history.",
+      "youtubeId": "",
+      "url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/StrangeFruit.pdf",
+      "urlLabel": "Open Strange Fruit PDF",
+      "meshHint": "PianoLP",
+      "fallbackMesh": "PianoLP",
+      "yOffset": 0.5,
+      "radius": 2.8,
+      "offset": [
+        -0.15,
+        0.08,
+        0
+      ]
+    },
+    {
+      "id": "strange-fruit-video",
+      "title": "Strange Fruit video",
+      "position": [
+        11.93,
+        3.55,
+        -10.2
+      ],
+      "kind": "youtube",
+      "body": "A filmed performance of the song Strange Fruit.",
+      "youtubeId": "YbcZstt8ACY",
+      "url": "https://www.youtube.com/watch?v=YbcZstt8ACY",
+      "urlLabel": "Open video",
+      "meshHint": "",
+      "fallbackMesh": "",
+      "radius": 2.8
+    },
+    {
+      "id": "langston-hughes-when-the-negro-was-in-vogue",
+      "title": "Langston Hughes, When the Negro Was in Vogue",
+      "position": null,
+      "kind": "link",
+      "body": "An essay by Langston Hughes on Harlem life and culture in the 1920s. Open the PDF in a browser to read the full text.",
+      "youtubeId": "",
+      "url": "https://engl152s2015.files.wordpress.com/2015/01/whenthenegrowasinvogue.pdf",
+      "urlLabel": "Open PDF",
+      "meshHint": "LP_Metal_0",
+      "fallbackMesh": "LP_Metal_0_1",
+      "yOffset": 0.75,
+      "radius": 3
+    },
+    {
+      "id": "portal-to-apartment",
+      "title": "Return to Harlem Apartment",
+      "position": [
+        -3.713,
+        3.010,
+        6.563
+      ],
+      "kind": "portal",
+      "body": "Step through the entrance to return to the Harlem Apartment.",
+      "youtubeId": "",
+      "url": "",
+      "urlLabel": "Return to Harlem Apartment",
+      "targetRoom": "apartment",
+      "meshHint": "",
+      "fallbackMesh": "",
+      "radius": 2.2
+    }
+  ]
+}

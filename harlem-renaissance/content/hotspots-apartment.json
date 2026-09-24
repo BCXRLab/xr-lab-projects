@@ -1,0 +1,106 @@
+{
+  "room": "apartment",
+  "proximityRadius": 1.8,
+  "source": "sketchfab-screenshots-user-2026-09-09",
+  "note": "FIRE=living coffee table; Lawrence=living Plane002; Nugent=kitchen (+X dresser/stove side, NOT living Lawrence poster); Douglas=dining-side hall wall; Black and Tan=dining table. Note: GLB sink at -3 is bathroom; kitchen is SM_KitchenDresser side.",
+  "hotspots": [
+    {
+      "id": "fire-1926",
+      "title": "FIRE!! (1926)",
+      "position": null,
+      "kind": "link",
+      "body": "A 1926 literary magazine from the Harlem Renaissance. Open the issue in a browser to read it.",
+      "youtubeId": "",
+      "url": "https://issuu.com/poczineproject/docs/poczp_fire_1926_readview",
+      "urlLabel": "Open FIRE!! (1926)",
+      "meshHint": "centerTable_lo",
+      "fallbackMesh": "Table",
+      "yOffset": 0.25,
+      "radius": 2.2
+    },
+    {
+      "id": "jacob-lawrence",
+      "title": "Jacob Lawrence",
+      "position": [
+        -3.24,
+        2.15,
+        2.57
+      ],
+      "kind": "link",
+      "body": "Art, Migration, and African American Life",
+      "youtubeId": "",
+      "url": "https://www.wikiart.org/en/jacob-lawrence",
+      "urlLabel": "Open link",
+      "meshHint": "",
+      "fallbackMesh": "",
+      "radius": 2.4
+    },
+    {
+      "id": "aaron-douglas",
+      "title": "Aaron Douglas",
+      "position": [
+        1.15,
+        1.9,
+        -0.86
+      ],
+      "kind": "link",
+      "body": "Art and Legacy of the Harlem Renaissance",
+      "youtubeId": "",
+      "url": "https://www.aarondouglas.org/",
+      "urlLabel": "Open link",
+      "meshHint": "",
+      "fallbackMesh": "",
+      "radius": 2.4
+    },
+    {
+      "id": "richard-bruce-nugent",
+      "title": "Richard Bruce Nugent",
+      "position": [
+        0.32,
+        1.474,
+        -3.149
+      ],
+      "kind": "link",
+      "body": "Writer, Artist, and Harlem Renaissance Icon",
+      "youtubeId": "",
+      "url": "https://beinecke.library.yale.edu/article/richard-bruce-nugent-papers-0",
+      "urlLabel": "Open link",
+      "meshHint": "",
+      "fallbackMesh": "",
+      "radius": 2.4
+    },
+    {
+      "id": "black-and-tan-1929",
+      "title": "Black and Tan (1929)",
+      "position": [
+        3.16,
+        1.5,
+        -0.85
+      ],
+      "kind": "youtube",
+      "body": "Duke Ellington's 1929 short film, connected with the Cotton Club.",
+      "youtubeId": "qQyB88qdrnc",
+      "url": "https://www.youtube.com/watch?v=qQyB88qdrnc",
+      "urlLabel": "Open video",
+      "meshHint": "",
+      "fallbackMesh": "",
+      "radius": 2.5
+    },
+    {
+      "id": "portal-to-cotton-club",
+      "title": "Enter The Cotton Club",
+      "position": null,
+      "kind": "portal",
+      "body": "Step through the door to visit The Cotton Club.",
+      "youtubeId": "",
+      "url": "",
+      "urlLabel": "Enter The Cotton Club",
+      "targetRoom": "cotton-club",
+      "meshHint": "Door",
+      "fallbackMesh": "Entrance_Point",
+      "radius": 2.2,
+      "markerHeight": 1.3,
+      "floorY": 0
+    }
+  ]
+}

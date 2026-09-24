@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>Harlem Renaissance — WebXR</title>
+    <meta
+      name="description"
+      content="Walk the Harlem Apartment and the Cotton Club. Gold markers open stories, videos, and links. Desktop, mobile, and WebXR VR."
+    />
+    <script type="module" crossorigin src="/xr-lab-projects/harlem-renaissance/assets/index-BB1nraB2.js"></script>
+    <link rel="stylesheet" crossorigin href="/xr-lab-projects/harlem-renaissance/assets/index-BYhHpmVO.css">
+  </head>
+  <body>
+    <a href="#room-nav" class="skip-link">Skip to room navigation</a>
+
+    <div id="hud" role="region" aria-label="Session status">
+      <div id="status">Starting...</div>
+      <div id="load-progress" class="load-progress" hidden>
+        <div id="load-bar" class="load-bar"></div>
+      </div>
+      <div id="hints">
+        <strong>Desktop:</strong> hold <em>right-click</em> look · WASD move · <em>Space</em> jump · Q/E turn · Shift sprint · <em>Esc</em> close story<br />
+        <strong>VR:</strong> <em>Enter VR</em> · left stick move · right stick turn · trigger teleport<br />
+        Walk up to a gold marker for stories, videos, and links. Tab for rooms and stories. Use the room buttons to visit the Apartment or the Cotton Club.
+      </div>
+      <div id="mobile-hints">Left stick move · swipe to look · tap a gold marker for stories</div>
+      <button type="button" id="hide-hints" class="hint-toggle" aria-controls="hints" aria-expanded="true">Hide hints</button>
+    </div>
+
+    <aside id="room-contents" class="room-contents" aria-label="Stories in this room"></aside>
+
+    <div id="a11y-announcer" class="visually-hidden" aria-live="assertive" aria-atomic="true"></div>
+    <div id="hotspot-a11y" class="visually-hidden"></div>
+
+    <!-- Standard template VR entry (Nancy-style). Button injected by mountVRButton. -->
+    <div id="mobile-move" class="virtual-joystick" aria-hidden="true" aria-label="Movement joystick">
+      <div class="virtual-joystick__knob"></div>
+    </div>
+
+    <div id="vr-entry" class="vr-entry" aria-label="Virtual reality controls"></div>
+
+  </body>
+</html>

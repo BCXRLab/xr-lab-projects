@@ -1,0 +1,21 @@
+{
+  "savedAt": "2026-07-22T22:45:01.189Z",
+  "lighting": {
+    "environment": "None",
+    "background": false,
+    "backgroundMode": "color",
+    "backgroundColor": "#b4ab97",
+    "backgroundBlur": 0.2,
+    "toneMapping": "ACES Filmic",
+    "exposure": 1.06,
+    "punctualLights": true,
+    "ambientIntensity": 1,
+    "ambientColor": "#ffecd1",
+    "directIntensity": 1.49,
+    "directColor": "#ffd4a8",
+    "hemiIntensity": 0.22,
+    "sunAzimuth": 40,
+    "sunElevation": 55
+  },
+  "configSnippet": "  lighting: {\n    environment: 'None',\n    background: false,\n    backgroundMode: 'color',\n    backgroundColor: '#b4ab97',\n    backgroundBlur: 0.2,\n    toneMapping: 'ACES Filmic',\n    exposure: 1.06,\n    punctualLights: true,\n    ambientIntensity: 1,\n    ambientColor: '#ffecd1',\n    directIntensity: 1.49,\n    directColor: '#ffd4a8',\n    hemiIntensity: 0.22,\n    sunAzimuth: 40,\n    sunElevation: 55,\n  },"
+}

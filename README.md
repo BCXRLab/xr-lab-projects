@@ -13,5 +13,6 @@ A collection of immersive learning, XR, VR, AR, and interactive projects develop
 | [WebXR Accessibility Design](./webxr-accessibility-design/) | [Open](https://bcxrlab.github.io/xr-lab-projects/webxr-accessibility-design/) |
 | [Ocean Acidification Tour](./ocean-acidification-tour/) | [Open](https://bcxrlab.github.io/xr-lab-projects/ocean-acidification-tour/) |
 | [XR Spatial Maze](./xr-spatial-maze/) | [Open](https://bcxrlab.github.io/xr-lab-projects/xr-spatial-maze/) |
+| [Harlem Renaissance](./harlem-renaissance/) | [Open](https://bcxrlab.github.io/xr-lab-projects/harlem-renaissance/) |
 
 Each project folder is a static site served by GitHub Pages from this repository.
