@@ -570,11 +570,12 @@ h2 {
   width: min(var(--content), calc(100% - 2rem));
   margin: 0 auto;
   padding: 1.5rem 0 calc(var(--space) * 0.85);
+  text-align: center;
 }
 
 .support p {
-  margin: 0;
-  max-width: 48rem;
+  margin: 0 auto;
+  max-width: 44rem;
   color: var(--gray-medium);
   font-size: 0.98rem;
 }
