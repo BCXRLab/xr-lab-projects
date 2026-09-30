@@ -10,8 +10,8 @@
       name="description"
       content="Spatial memory maze: explore a full-size maze, then pick the matching layout. Desktop, mobile, and WebXR VR."
     />
-    <script type="module" crossorigin src="./assets/index-CzYo3vpy.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-UzKBFSsI.css">
+    <script type="module" crossorigin src="./assets/index-COyEER96.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CbwODU95.css">
   </head>
   <body>
     <div id="app">
@@ -24,7 +24,10 @@
           <strong>VR:</strong> Enter VR · left stick move · right stick turn · trigger select · hold A/X teleport
         </div>
         <div id="mobile-hints">Left stick move · swipe to look · tap a panel to select</div>
-        <button type="button" id="hide-hints" class="hint-toggle">Hide hints</button>
+        <div class="hud-actions">
+          <button type="button" id="music-toggle" class="hint-toggle" aria-pressed="true" aria-label="Music On. Click to turn off.">Music On</button>
+          <button type="button" id="hide-hints" class="hint-toggle">Hide hints</button>
+        </div>
       </div>
       <div id="align-hud" hidden></div>
 
