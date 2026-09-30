@@ -140,4 +140,54 @@ Developed through the Bellevue College XR Lab for humanities teaching.
 
 **Co-Developers:** David Wikstrom and Maria Sanchez Isaza
 
-Interior models from Sketchfab (Harlem Renaissance apartment and Cotton Club). Story links point to public sources (Library of Congress, YouTube, museum and artist sites). Panel copy is kept educational and classroom-safe.
+Story links point to public sources (Library of Congress, YouTube, museum and artist sites). Panel copy is kept educational and classroom-safe.
+
+Furniture and props in both interiors were assembled from Sketchfab assets. Credit the original creators:
+
+### Cotton Club (Sketchfab)
+
+- Literary Club Chair — IU Indianapolis University
+- Vintage microphone — Klasy
+- Velvet rope — UolterUait
+- Saloon piano — Adrian H
+- bar chair round 01 4k — mohamedhussien
+- Rusty Vintage Round Table — Nikoleta.Zhecheva
+- Whiskey JB — Rylae Shylna
+- Trumpet — Charlie Tinley
+- Cotton club exterior — The Center for Digital Humanities UArizona
+- Bar counter — Adam
+- Piano Stool Low — RubaQewar
+- Wine rug — Anom Purple Modelling
+- Ash tray — James Nelson
+- Round table and Chairs — Vilson Pistori
+
+### Apartment (Sketchfab)
+
+- Literary Club Chair — IU Indianapolis University
+- Phonograph — tency
+- Antique Globe — Matthew Collings
+- His Master’s Voice 101 suitcase gramophone — Museum of Engineering and Technology, Krakow
+- Side table lowpoly — Renee B
+- Persian Rug — Nicholas Record
+- Wall Sconce - Arandela — mismeirart
+- Clock — peachybunny
+- Wooden Center Table — oisougabo
+- Table and Chairs — Vilson Pistori
+- Floral Plate — IU Indianapolis University Library
+- Coal-fired cooker model 61 — Museum of Engineering and Technology, Krakow
+- Victorian kitchen sink — Tijerín Art Studio
+- Wine Rug — Anom Purple Modelling
+- Side Table Dresser — Ryan_Nein
+- Vintage Books — Feivelyn
+- Victorian Bed — Abdullah Mohammed
+- Victorian Vanity — Javier Carceller
+- OXFORD cast-iron radiator, larger version (710) — termagroup
+- Dining Room Side Table — IU Indianapolis University Library
+- Vintage Framed Art and Photos — NZP3D
+- Kitchen Dresser — rjducats
+- Ornate Mirror 01 4k — mohamedhussien
+- Bathtub — 3ddominator
+- Sink — lagesnpiet
+- Wall picture — grafgrial
+- Picture frame — hako
+- Large Framed Picture [WOOD] — Lonit
