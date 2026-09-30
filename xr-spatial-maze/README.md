@@ -69,7 +69,7 @@ Levels: **1** has five mazes, **2** has three, **3** has three. Each round picks
 | Jump | **Space** |
 | Select a panel | **Left click** or **F** |
 | Hide hints | **H** |
-| Music on / off | **Music On** / **Music Off** in the hint card |
+| Music on / off | Speaker icon, bottom-left |
 
 ### Phone / tablet
 
@@ -78,7 +78,7 @@ Levels: **1** has five mazes, **2** has three, **3** has three. Each round picks
 | Move | Left virtual stick |
 | Look | Swipe on the view |
 | Select | Tap a world panel |
-| Music on / off | **Music On** / **Music Off** in the hint card |
+| Music on / off | Speaker icon, top-right |
 
 ### VR (WebXR)
 
@@ -89,7 +89,7 @@ Levels: **1** has five mazes, **2** has three, **3** has three. Each round picks
 | Snap turn | Right thumbstick |
 | Select | Trigger on a panel |
 | Teleport | Hold **A** or **X**, aim, release |
-| Music on / off | Aim at the **Music On** / **Music Off** world button and pull trigger |
+| Music on / off | Use the speaker icon before **Enter VR**. The choice is saved. |
 
 Gameplay UI is in the world so mouse, touch, and controller rays all hit the same panels.
 
@@ -104,7 +104,7 @@ Gameplay UI is in the world so mouse, touch, and controller rays all hit the sam
 | **Three levels** | Increasing layouts; random variant each attempt. |
 | **Same URL everywhere** | Laptop, phone, and headset share one HTTPS link. |
 | **World-space menus** | Level pick, match, retry, and next are 3D panels in the start zone. |
-| **Music on / off** | Turn the Kosatka loop off from the HUD (desktop / phone) or the world **Music** button (VR). Game sounds stay on. The choice is saved in the browser. |
+| **Music on / off** | Speaker icon on the canvas turns the Kosatka loop off. Game sounds stay on. The choice is saved in the browser. |
 
 ---
 

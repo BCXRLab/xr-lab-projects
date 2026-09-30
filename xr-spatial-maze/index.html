@@ -10,8 +10,8 @@
       name="description"
       content="Spatial memory maze: explore a full-size maze, then pick the matching layout. Desktop, mobile, and WebXR VR."
     />
-    <script type="module" crossorigin src="./assets/index-COyEER96.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CbwODU95.css">
+    <script type="module" crossorigin src="./assets/index-BSIkkOTy.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-7zvEbf23.css">
   </head>
   <body>
     <div id="app">
@@ -25,10 +25,20 @@
         </div>
         <div id="mobile-hints">Left stick move · swipe to look · tap a panel to select</div>
         <div class="hud-actions">
-          <button type="button" id="music-toggle" class="hint-toggle" aria-pressed="true" aria-label="Music On. Click to turn off.">Music On</button>
           <button type="button" id="hide-hints" class="hint-toggle">Hide hints</button>
         </div>
       </div>
+      <button type="button" id="music-toggle" class="music-fab" aria-pressed="true" aria-label="Music on. Click to turn off.">
+        <svg class="music-fab__on" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 9v6h3.2L12 19V5L7.2 9H4z" />
+          <path d="M16 8.5a4.5 4.5 0 0 1 0 7" fill="none" />
+          <path d="M18.4 6.2a7.5 7.5 0 0 1 0 11.6" fill="none" />
+        </svg>
+        <svg class="music-fab__off" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 9v6h3.2L12 19V5L7.2 9H4z" />
+          <path d="M16.2 9.2 21 14M21 9.2l-4.8 4.8" fill="none" />
+        </svg>
+      </button>
       <div id="align-hud" hidden></div>
 
       <div id="mobile-move" class="virtual-joystick" aria-hidden="true">
