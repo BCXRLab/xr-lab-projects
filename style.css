@@ -102,6 +102,18 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .site-header {
   background: var(--white);
   border-bottom: 4px solid var(--bc-fountain-blue);
@@ -444,20 +456,15 @@ h2 {
   border-left: 6px solid var(--bc-fountain-blue);
   border-radius: 14px;
   box-shadow: var(--shadow);
-  text-decoration: none;
   color: inherit;
   transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
 }
 
 .project-card:hover,
-.project-card:focus-visible {
+.project-card:focus-within {
   transform: translateY(-3px);
   border-left-color: var(--bc-rain-garden-green);
   box-shadow: 0 16px 36px rgba(22, 47, 87, 0.16);
-}
-
-.project-card:focus-visible {
-  outline-offset: 4px;
 }
 
 .project-card__top {
@@ -494,7 +501,7 @@ h2 {
 }
 
 .project-card:hover h3,
-.project-card:focus-visible h3 {
+.project-card:focus-within h3 {
   text-decoration: underline;
   text-decoration-color: var(--bc-rain-garden-green);
   text-decoration-thickness: 3px;
@@ -507,23 +514,51 @@ h2 {
   flex: 1 1 auto;
 }
 
-.card-cta {
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.85rem;
+  margin-top: 1.1rem;
+  flex: 0 0 auto;
+}
+
+.card-cta,
+.card-more {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  margin-top: 1.1rem;
-  font-weight: 750;
+  justify-content: center;
+  min-height: 44px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card-cta {
+  padding: 0.35rem 0.95rem;
+  background: var(--bc-brutus-blue);
+  color: var(--white);
+  border-radius: 8px;
+}
+
+.card-cta:hover,
+.card-cta:focus-visible {
+  background: var(--bc-rainy-night-blue);
+  color: var(--white);
+}
+
+.card-more {
+  padding: 0.2rem 0.15rem;
   color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
 }
 
-.card-cta::after {
-  content: "→";
-  font-weight: 400;
-}
-
-.project-card:hover .card-cta,
-.project-card:focus-visible .card-cta {
+.card-more:hover,
+.card-more:focus-visible {
   color: var(--bc-brutus-blue);
+  text-decoration-color: var(--bc-rain-garden-green);
+  text-decoration-thickness: 3px;
 }
 
 .site-footer {
