@@ -165,4 +165,40 @@ Oceanography content and media were assembled for teaching through the Bellevue 
 **Lead Developer:** David Wikstrom  
 **Faculty partner:** Nancy Lane
 
-Student artwork remains credited to the listed artists. Ambient track: MickeysCat — *Moment of Peace* (Pixabay).
+Many clips also keep a short credit on their in-tour panel.
+
+### Music
+
+“Moment of Peace” — MickeysCat (composer: Korzhytskyi Oleksandr). Solo piano. Free for use under the [Pixabay Content License](https://pixabay.com/music/solo-piano-moment-of-peace-mickeyscat-554494/).
+
+### Videos
+
+- **Voices of Action** series (Room 6) — Bellevue College student and community films, including *What is Voices of Action?*, *Protectors of Marine Life*, *Bellevue College is Keeping Salmon Safe*, and *Alexis Beard*. Made possible by a grant from the Bellevue College Foundation.
+- **Thioro Lo — Voices of Action** (Room 2) — Thioro Lo, Ocea101 Voices of Action, Spring 2027.
+- **Ocean Acidity Critical Threshold** (Room 4) — World Economic Forum, segment from *What's Next for Humanitarianism & Ocean Acidity Crosses Safe Limit | WEF | Top Stories of the Week*.
+- **Richard Feely, Ocean Acidity** (Room 5) — NOAA scientist Richard Feely.
+- **Ocean Acidification** Scratch demo (Room 3) — Katelyn Pedersen and Eileen Singov.
+- Other teaching clips (*What is Ocean Acidification*, *Ocean Acidification… in a nutshell*, *To Learn More*) play from YouTube as linked on each panel. SharePoint Stream chemistry presentation is used for classroom viewing on desktop.
+
+### 360 videos
+
+Salish Sea dives by **Laura James** (Room 5):
+
+- Scuba diving Keystone Jetty — 360° with narration
+- VSS Cove — 360° with narration
+
+Room panoramas are teaching skyboxes assembled for this tour.
+
+### Student artwork
+
+Room 7 gallery:
+
+- Sangmin Lee — *2018* (2018), *GLOBAL WARMING* (2017), *Ocean, sea, beach…* (December 2017)
+- Erinn Gelina S. Abesamis — *Salish Sea Rose* (2019)
+
+### Documents and PDFs
+
+- *My First Fish & the Future of the Ocean* — Caiden, Ryan & Tristan (6/9/25). Shown as *Shellfish Industry in Washington* in Room 2.
+- Opening message (Room 1) — *Ocean Acidification: From Knowledge to Action — Washington State's Strategic Response*.
+- OA chemistry diagram (Room 5) — oyster anatomy reference via [Hamahama Oysters](https://hamahamaoysters.com/pages/oyster-anatomy).
+- *Lost Cities: A Story of Coral* — [lostcities.org](http://lostcities.org/).
