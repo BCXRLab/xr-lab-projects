@@ -4,11 +4,13 @@ An interactive 3D learning resource for the Wing Chun **Siu Nim Tau** form. Stud
 
 Live site: [https://bcxrlab.github.io/xr-lab-projects/wing-chun/](https://bcxrlab.github.io/xr-lab-projects/wing-chun/)
 
-Bellevue College XR Lab — interactive 3D learning resource for martial-arts instruction.
+Bellevue College XR Lab — interactive 3D learning resource for Wing Chun and self-defense instruction.
 
 ---
 
 ## What this project is
+
+Siu Nim Tau is the first form in Wing Chun. Students use it to build structure, timing, and the basics of this **self-defense** system. The viewer is a study aid: learn each movement, review the sequence, and see the form from any angle.
 
 This version uses the **faculty-provided movement timing** and a simplified **single-card** interface.
 
@@ -116,6 +118,7 @@ The website uses **neutral environment lighting**, soft shadows, and controlled 
 
 Developed through the Bellevue College XR Lab as an open educational 3D learning resource.
 
-**Lead Developer:** Maria Sanchez Isaza
+**Lead Developer:** Maria Sanchez Isaza  
+**Faculty partner:** Bradley Huggins
 
 Movement timing and terminology were supplied by faculty for the Siu Nim Tau avatar. Times are tied directly to the original animation. Animation finalized and polished with support from Big Picture High School student interns.
