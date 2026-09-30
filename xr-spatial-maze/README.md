@@ -122,6 +122,6 @@ No backend. After the production build, the site is static files.
 Developed through the Bellevue College XR Lab from an engineering-education brief on spatial memory and 3D layout.
 
 **Lead Developer:** David Wikstrom  
-**Faculty partner:** Frank Lee — built with Frank Lee for his engineering class.
+**Faculty partner:** Frank Lee
 
 Maze models are original teaching assets. Ambient loop: Kosatka (fair-use teaching clip in `audio/music/`).

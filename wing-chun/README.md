@@ -118,4 +118,4 @@ Developed through the Bellevue College XR Lab as an open educational 3D learning
 
 **Lead Developer:** Maria Sanchez Isaza
 
-Movement timing and terminology were supplied by faculty for the Siu Nim Tau avatar. Times are tied directly to the original animation.
+Movement timing and terminology were supplied by faculty for the Siu Nim Tau avatar. Times are tied directly to the original animation. Animation finalized and polished with support from Big Picture High School student interns.

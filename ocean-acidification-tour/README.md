@@ -163,6 +163,6 @@ On the hosted site, VR video panels tell the learner to **exit VR and watch on d
 Oceanography content and media were assembled for teaching through the Bellevue College XR Lab.
 
 **Lead Developer:** David Wikstrom  
-**Faculty partner:** Nancy Lane — built with Nancy Lane for her oceanography class.
+**Faculty partner:** Nancy Lane
 
 Student artwork remains credited to the listed artists. Ambient track: MickeysCat — *Moment of Peace* (Pixabay).
