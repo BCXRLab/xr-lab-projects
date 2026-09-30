@@ -160,4 +160,9 @@ On the hosted site, VR video panels tell the learner to **exit VR and watch on d
 
 ## Credits
 
-Oceanography content and media were assembled for teaching through the Bellevue College XR Lab. Student artwork remains credited to the listed artists. Ambient track: MickeysCat — *Moment of Peace* (Pixabay).
+Oceanography content and media were assembled for teaching through the Bellevue College XR Lab.
+
+**Lead Developer:** David Wikstrom  
+**Faculty partner:** Nancy Lane — built with Nancy Lane for her oceanography class.
+
+Student artwork remains credited to the listed artists. Ambient track: MickeysCat — *Moment of Peace* (Pixabay).

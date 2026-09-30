@@ -136,4 +136,8 @@ WebXR requires **localhost** or **HTTPS**. GitHub Pages already provides HTTPS.
 
 ## Credits
 
-Developed through the Bellevue College XR Lab for humanities teaching. Interior models from Sketchfab (Harlem Renaissance apartment and Cotton Club). Story links point to public sources (Library of Congress, YouTube, museum and artist sites). Panel copy is kept educational and classroom-safe.
+Developed through the Bellevue College XR Lab for humanities teaching.
+
+**Co-Developers:** David Wikstrom and Maria Sanchez Isaza
+
+Interior models from Sketchfab (Harlem Renaissance apartment and Cotton Club). Story links point to public sources (Library of Congress, YouTube, museum and artist sites). Panel copy is kept educational and classroom-safe.

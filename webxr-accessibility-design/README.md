@@ -125,3 +125,5 @@ WebXR requires **localhost** or **HTTPS**. GitHub Pages already provides HTTPS.
 ## Credits
 
 Developed through the Bellevue College XR Lab as an open educational WebXR resource.
+
+**Lead Developer:** David Wikstrom
