@@ -2,15 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="Immersive learning, XR, VR, and interactive projects from the Bellevue College XR Lab. Open in a browser, on a phone, or in a headset.">
   <meta name="theme-color" content="#003d79">
   <meta name="color-scheme" content="light">
   <title>XR Lab Projects — Bellevue College</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      try {
+        var s = JSON.parse(localStorage.getItem('xr-lab-hub-a11y') || '{}');
+        var h = document.documentElement;
+        if (s.highContrast) h.classList.add('a11y-high-contrast');
+        if (s.largeText) h.classList.add('a11y-large-text');
+        if (s.readableFont) h.classList.add('a11y-readable');
+        if (s.underlineLinks) h.classList.add('a11y-underline');
+        if (s.extraSpacing) h.classList.add('a11y-spacing');
+        if (s.chromeHidden) h.classList.add('a11y-chrome-hidden');
+        if (s.reducedFollowOs === false ? s.reducedMotion : window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          h.classList.add('a11y-reduced');
+        }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
+  <a class="skip-link skip-link--second" href="#a11y-settings-btn">Skip to accessibility settings</a>
+  <div id="a11y-live" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <button type="button" id="a11y-tab" class="a11y-tab">Show accessibility</button>
+  <div id="a11y-chrome" class="a11y-chrome">
+    <button type="button" id="a11y-hide" class="a11y-fab" aria-pressed="false" aria-label="Hide accessibility controls">Hide</button>
+    <button type="button" id="a11y-settings-btn" class="a11y-fab a11y-fab--cog" aria-haspopup="dialog" aria-controls="a11y-settings" aria-expanded="false" aria-label="Open accessibility settings">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path fill="currentColor" d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.03 7.03 0 0 0-1.63-.94l-.36-2.54A.5.5 0 0 0 13.9 2h-3.8a.5.5 0 0 0-.49.42l-.36 2.54c-.59.22-1.14.53-1.63.94l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.48a.5.5 0 0 0 .12.64l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94L2.83 14.16a.5.5 0 0 0-.12.64l1.92 3.32c.14.24.43.34.69.22l2.39-.96c.49.4 1.04.72 1.63.94l.36 2.54c.05.24.25.42.49.42h3.8c.24 0 .44-.18.49-.42l.36-2.54c.59-.22 1.14-.53 1.63-.94l2.39.96c.26.12.55.02.69-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/>
+      </svg>
+    </button>
+  </div>
+
+  <dialog id="a11y-settings" aria-labelledby="a11y-settings-title">
+    <h2 id="a11y-settings-title" tabindex="-1">Accessibility settings</h2>
+    <p class="a11y-lead">These options change this projects page only. Each project has its own controls once you open it.</p>
+    <fieldset>
+      <legend>Comfort</legend>
+      <label class="a11y-check"><input type="checkbox" id="a11y-reduced"> Reduced motion</label>
+      <label class="a11y-check"><input type="checkbox" id="a11y-space"> Extra spacing</label>
+    </fieldset>
+    <fieldset>
+      <legend>Display</legend>
+      <label class="a11y-check"><input type="checkbox" id="a11y-contrast"> High contrast</label>
+      <label class="a11y-check"><input type="checkbox" id="a11y-large"> Larger text</label>
+      <label class="a11y-check"><input type="checkbox" id="a11y-font"> Readable font</label>
+      <label class="a11y-check"><input type="checkbox" id="a11y-links"> Underline all links</label>
+    </fieldset>
+    <div class="a11y-actions">
+      <button type="button" id="a11y-reset">Reset defaults</button>
+      <button type="button" id="a11y-close">Close</button>
+    </div>
+  </dialog>
 
   <header class="site-header">
     <div class="site-header__inner">
@@ -208,5 +258,6 @@
       <p class="site-footer__note">Hours and class-visit scheduling are on the XR Lab website.</p>
     </div>
   </footer>
+  <script src="./a11y.js"></script>
 </body>
 </html>

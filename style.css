@@ -21,6 +21,7 @@
   --font: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --space: clamp(1.25rem, 4vw, 3.75rem);
   --content: 72rem;
+  --font-scale: 1;
 }
 
 *,
@@ -57,7 +58,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font);
-  font-size: 1.0625rem;
+  font-size: calc(1.0625rem * var(--font-scale));
   line-height: 1.55;
   color: var(--gray-dark);
   background: var(--gray-xxlight);
@@ -100,6 +101,10 @@ a:focus-visible {
   transform: translateY(0);
   outline: 3px solid var(--black);
   outline-offset: 2px;
+}
+
+.skip-link--second:focus {
+  top: 3.6rem;
 }
 
 .visually-hidden {
@@ -725,4 +730,249 @@ h2 {
     background: Canvas;
     color: CanvasText;
   }
+}
+
+/* Accessibility chrome (settings cog + show/hide tab) */
+.a11y-chrome {
+  position: fixed;
+  top: max(0.75rem, env(safe-area-inset-top));
+  right: max(0.75rem, env(safe-area-inset-right));
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.a11y-fab {
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0.4rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--gray-light);
+  background: var(--white);
+  color: var(--bc-brutus-blue);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.a11y-fab--cog {
+  padding: 0.45rem;
+}
+
+.a11y-fab svg {
+  display: block;
+}
+
+.a11y-tab {
+  display: none;
+  position: fixed;
+  top: 6.5rem;
+  right: 0;
+  z-index: 40;
+  min-height: 44px;
+  margin: 0;
+  padding: 0.65rem 0.55rem;
+  border: 1px solid var(--gray-light);
+  border-right: 0;
+  border-radius: 10px 0 0 10px;
+  background: var(--white);
+  color: var(--bc-brutus-blue);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+html.a11y-chrome-hidden .a11y-chrome {
+  display: none;
+}
+
+html.a11y-chrome-hidden .a11y-tab {
+  display: inline-flex;
+}
+
+#a11y-settings {
+  border: 1px solid var(--gray-light);
+  border-radius: 14px;
+  background: var(--white);
+  color: var(--gray-dark);
+  padding: 1.15rem 1.25rem;
+  max-width: min(26rem, calc(100vw - 2rem));
+  max-height: min(90vh, 40rem);
+  overflow: auto;
+}
+
+#a11y-settings::backdrop {
+  background: rgba(22, 47, 87, 0.45);
+}
+
+#a11y-settings h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.25rem;
+  color: var(--bc-brutus-blue);
+}
+
+.a11y-lead {
+  margin: 0 0 0.9rem;
+  font-size: 0.95rem;
+  color: var(--gray-medium);
+}
+
+#a11y-settings fieldset {
+  border: 1px solid var(--gray-light);
+  border-radius: 10px;
+  margin: 0 0 0.75rem;
+  padding: 0.4rem 0.85rem 0.65rem;
+}
+
+#a11y-settings legend {
+  padding: 0 0.4rem;
+  color: var(--bc-brutus-blue);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.a11y-check {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 44px;
+  cursor: pointer;
+}
+
+.a11y-check input {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: none;
+}
+
+.a11y-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+}
+
+.a11y-actions button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-light);
+  background: var(--gray-xxlight);
+  color: var(--bc-brutus-blue);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#a11y-close {
+  background: var(--bc-brutus-blue);
+  border-color: var(--bc-brutus-blue);
+  color: var(--white);
+}
+
+html.a11y-large-text {
+  --font-scale: 1.22;
+}
+
+html.a11y-readable {
+  --font: "Comic Sans MS", "Atkinson Hyperlegible", "Segoe UI", sans-serif;
+  letter-spacing: 0.03em;
+  word-spacing: 0.06em;
+}
+
+html.a11y-underline a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+html.a11y-spacing body {
+  line-height: 1.75;
+  letter-spacing: 0.03em;
+}
+
+html.a11y-reduced,
+html.a11y-reduced *,
+html.a11y-reduced *::before,
+html.a11y-reduced *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+html.a11y-reduced {
+  scroll-behavior: auto;
+}
+
+html.a11y-high-contrast {
+  --white: #fff;
+  --black: #000;
+  --gray-dark: #000;
+  --gray-medium: #000;
+  --gray-light: #000;
+  --gray-xlight: #fff;
+  --gray-xxlight: #fff;
+  --link: #0000cc;
+  --focus: #000;
+  --bc-brutus-blue: #000;
+  --bc-rainy-night-blue: #000;
+  --bc-fountain-blue: #000;
+  --fountain-light: #fff;
+  --fountain-xlight: #fff;
+  --shadow: none;
+  --bc-rain-garden-green: #000;
+}
+
+html.a11y-high-contrast .hero,
+html.a11y-high-contrast .site-footer {
+  background: #000;
+  color: #fff;
+  background-image: none;
+}
+
+html.a11y-high-contrast .hero h1,
+html.a11y-high-contrast .site-footer h2,
+html.a11y-high-contrast .lede,
+html.a11y-high-contrast .eyebrow,
+html.a11y-high-contrast .site-footer p,
+html.a11y-high-contrast .site-footer li,
+html.a11y-high-contrast .site-footer a {
+  color: #fff;
+}
+
+html.a11y-high-contrast .btn--primary,
+html.a11y-high-contrast .card-cta,
+html.a11y-high-contrast #a11y-close {
+  background: #ff0;
+  color: #000;
+  border-color: #000;
+}
+
+html.a11y-high-contrast .project-card,
+html.a11y-high-contrast .how-steps li,
+html.a11y-high-contrast .hero-facts li,
+html.a11y-high-contrast .a11y-fab,
+html.a11y-high-contrast .a11y-tab,
+html.a11y-high-contrast #a11y-settings {
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
+}
+
+html.a11y-high-contrast .site-header {
+  border-bottom: 4px solid #000;
 }
