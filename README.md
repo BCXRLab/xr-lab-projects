@@ -17,7 +17,3 @@ A collection of immersive learning, XR, VR, AR, and interactive projects develop
 | [Harlem Renaissance](./harlem-renaissance/) | [Open](https://bcxrlab.github.io/xr-lab-projects/harlem-renaissance/) |
 
 Each project folder is a static site served by GitHub Pages from this repository.
-
-## Accessibility (hub page)
-
-The projects landing page has a settings gear (top right) and a **Hide** control. Hide tucks the gear and leaves an **Accessibility** tab on the right edge so you can bring the controls back. Options: reduced motion, extra spacing, high contrast, larger text, a readable font, and underlined links. Choices stay in the browser (`localStorage` key `xr-lab-hub-a11y`). They apply to this hub page; each project has its own in-experience controls.
