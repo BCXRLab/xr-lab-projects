@@ -8,8 +8,24 @@
       name="description"
       content="Interactive Three.js / WebXR lab demonstrating accessibility features for VR applications in desktop and immersive modes."
     />
-    <script type="module" crossorigin src="/xr-lab-projects/webxr-accessibility-design/assets/index-C3BfYcFf.js"></script>
-    <link rel="stylesheet" crossorigin href="/xr-lab-projects/webxr-accessibility-design/assets/index-rmYv2YkL.css">
+    <script>
+      (function () {
+        try {
+          var s = JSON.parse(localStorage.getItem('webxr-a11y-lab') || 'null') || {};
+          var h = document.documentElement;
+          var contrast = s.contrastFollowOs === false
+            ? !!s.highContrast
+            : window.matchMedia('(prefers-contrast: more)').matches;
+          if (contrast) h.classList.add('a11y-high-contrast');
+          if (s.readableFont) h.classList.add('a11y-readable-font');
+          var scale = typeof s.uiScale === 'number' ? s.uiScale : 1;
+          if (scale >= 1.25) h.classList.add('a11y-large-ui');
+          h.style.setProperty('--font-scale', String(scale));
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/xr-lab-projects/webxr-accessibility-design/assets/index-Cmbx1YwZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/xr-lab-projects/webxr-accessibility-design/assets/index-lUCvMbo4.css">
   </head>
   <body>
     <a class="skip-link" href="#a11y-panel">Skip to accessibility settings</a>
@@ -17,7 +33,7 @@
     <div id="hud" role="region" aria-label="Session status">
       <div id="status">Starting…</div>
       <div id="hints">
-        <strong>Desktop:</strong> hold <em>right-click</em> look · WASD move · Q/E turn ·
+        <strong>Desktop:</strong> arrow keys or hold <em>right-click</em> look · WASD move · Q/E turn ·
         click stations to interact<br />
         <strong>VR:</strong> <em>Enter VR</em> · left stick move · right stick snap turn ·
         trigger select

@@ -30,13 +30,13 @@ This folder is the published site. You do not need Node or a local server to try
 
 | Action | Control |
 |--------|---------|
-| Look | Hold **right-click** and drag |
+| Look | **Arrow keys**, or hold **right-click** and drag |
 | Move | **W A S D** |
 | Turn | **Q** / **E** |
 | Select a station | Click it |
 | Teleport (if move mode is Teleport) | **T** |
 
-A skip link at the top jumps to the settings panel. The desktop chrome uses semantic HTML and ARIA.
+A skip link at the top jumps to the settings panel. The same settings apply in VR and persist in this browser. The desktop chrome uses semantic HTML and ARIA.
 
 ### VR (WebXR)
 
