@@ -13,9 +13,10 @@
       highContrast: false,
       largeText: false,
       readableFont: false,
-      underlineLinks: false,
+      underlineLinks: true,
       extraSpacing: false,
       chromeHidden: false,
+      v: 2,
     };
   }
 
@@ -24,7 +25,13 @@
     try {
       const raw = JSON.parse(localStorage.getItem(KEY) || 'null');
       if (!raw || typeof raw !== 'object') return base;
-      return Object.assign(base, raw);
+      const s = Object.assign(base, raw);
+      if (!raw.v || raw.v < 2) {
+        s.underlineLinks = true;
+        s.v = 2;
+        try { localStorage.setItem(KEY, JSON.stringify(s)); } catch { /* private mode */ }
+      }
+      return s;
     } catch {
       return base;
     }

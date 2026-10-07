@@ -32,11 +32,15 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.75rem;
 }
 
 #main,
 #projects,
-#how-heading {
+#how-heading,
+#page-title,
+#support-heading,
+.project-card {
   scroll-margin-top: 5.75rem;
 }
 
