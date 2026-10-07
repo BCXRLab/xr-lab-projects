@@ -46,7 +46,7 @@ Videos in that playlist show up as cards. A video added there appears on refresh
 
 - The page shows the Anatomy Models grid, in alphabetical order.
 - Type one letter. `A` or `a` should leave only Aluminum Skeleton. `B` should leave only Brain Anatomy Model. Names that do not start with that letter should disappear. The same rule applies to every other letter.
-- Keep typing. `Al` stays on Aluminum. `kid` finds the kidney. `lung` and `LUNGS` find the same lung-related models. `ca` stays on Cardio-Pulmonary Model. Heart models stay hidden for `ca`; they show up for `heart`, `cardiac`, or `cardio`.
+- Keep typing. `Al` stays on Aluminum. `kid` finds the kidney. `lung` and `LUNGS` find the same lung-related models. `ca` stays on Cardio Pulmonary. Heart models stay hidden for `ca`; they show up for `heart`, `cardiac`, or `cardio`.
 - Click a card. A popup should open with the Sketchfab model. Escape, the X, or the dark background closes it.
 - From http://127.0.0.1:8094/, open Animations. While online, Smoking and Emphysema Animation and Stages of Liver Damage should be there. Click one. The popup should play that YouTube video.
 - Tab from the top of the page. The first control is Skip to collection. The second is Skip to accessibility settings, which opens the gear panel.

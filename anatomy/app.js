@@ -310,7 +310,9 @@ function withCaptionPolicy(url) {
 function fillModal(item) {
   const related = (item.related || []).map(findItem).filter(Boolean);
   const description = usefulDescription(item);
-  const showSource = item.sketchfabName && norm(item.sketchfabName) !== norm(item.title);
+  const showSource = item.sketchfabName
+    && norm(item.sketchfabName) !== norm(item.title)
+    && cleanModelTitle(item.sketchfabName) !== item.title;
   const showAuthor = item.kind === "animation" && item.youtubeAuthor;
   const meta = [item.year, item.license].filter(Boolean).join(" · ");
   const externalHref = item.kind === "animation"
@@ -716,23 +718,96 @@ function sketchfabTags(model) {
   return tags;
 }
 
-function modelFromSketchfab(model, usedIds) {
-  const title = String(model.name || "").replace(/\s+/g, " ").trim().slice(0, 140) || "Untitled model";
+function rawSketchfabName(model) {
+  return String(model.name || "").replace(/\s+/g, " ").trim().slice(0, 140);
+}
+
+function remoteYear(model) {
   const year = String(model.publishedAt || "").slice(0, 4);
+  return /^\d{4}$/.test(year) ? year : "";
+}
+
+function remoteLicense(model) {
   const license = model.license && typeof model.license.label === "string" ? model.license.label.trim() : "";
+  return license.length <= 80 ? license : "";
+}
+
+// Drop upload boilerplate (Reza, Bellevue College, dates) and keep the model name.
+function cleanModelTitle(raw) {
+  const original = String(raw || "").replace(/\s+/g, " ").trim();
+  let s = original
+    .replace(/[_/]+/g, " ")
+    .replace(/&/g, " and ")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!s) return "";
+
+  const month = "jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?";
+  s = s.replace(new RegExp(`\\b(?:${month})\\.?\\s*20\\d{2}\\b`, "gi"), " ");
+  s = s.replace(new RegExp(`\\b(?:${month})20\\d{2}\\b`, "gi"), " ");
+  s = s.replace(/\b20\d{2}\b/g, " ");
+
+  const phrases = [
+    "anatomy student model",
+    "student project",
+    "bellevue college",
+    "bc xr lab",
+    "annotated",
+    "horizontal v2",
+    "horizontal",
+    "reza",
+  ];
+  for (const phrase of phrases) {
+    s = s.replace(new RegExp(`\\b${phrase}\\b`, "gi"), " ");
+  }
+  s = s.replace(/\bv\d+\b/gi, " ");
+  s = s.replace(/[–—_-]+/g, " ");
+  s = s.replace(/[.,;:]+/g, " ");
+  s = s.replace(/\s+/g, " ").trim();
+  s = s.replace(/([A-Za-z])(\d)/g, "$1 $2");
+  s = s.replace(/(\d)([A-Za-z])/g, "$1 $2");
+  s = s.replace(/\s+/g, " ").trim();
+  if (!s) return original.slice(0, 140);
+
+  s = s.split(" ").map((word) => {
+    if (/^\(.*\)$/.test(word)) return word;
+    if (/^[A-Z0-9]{2,8}$/.test(word)) return word;
+    if (word.toLowerCase() === "and") return "and";
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  }).join(" ");
+  return s.slice(0, 140);
+}
+
+function applyRemoteModel(existing, remote) {
+  const liveName = rawSketchfabName(remote);
+  const title = cleanModelTitle(liveName) || existing.title;
+  return {
+    ...existing,
+    sketchfab: remote.uid || existing.sketchfab,
+    title,
+    sketchfabName: liveName || existing.sketchfabName,
+    viewerUrl: sketchfabPage(remote) || existing.viewerUrl,
+    license: remoteLicense(remote) || existing.license,
+    year: remoteYear(remote) || existing.year,
+  };
+}
+
+function modelFromSketchfab(model, usedIds) {
+  const liveName = rawSketchfabName(model);
+  const title = cleanModelTitle(liveName) || liveName || "Untitled model";
   return {
     id: catalogId(title, model.uid, usedIds),
     kind: "model",
     title,
-    sketchfabName: title,
+    sketchfabName: liveName || title,
     sketchfab: model.uid,
     viewerUrl: sketchfabPage(model),
     thumbnail: sketchfabThumb(model),
     description: "",
     tags: sketchfabTags(model),
     related: [],
-    license: license.length <= 80 ? license : "",
-    year: /^\d{4}$/.test(year) ? year : "",
+    license: remoteLicense(model),
+    year: remoteYear(model),
   };
 }
 
@@ -743,15 +818,49 @@ function mergeCatalog(packaged, remoteModels) {
   for (const item of [...localModels, ...(packaged.animations || [])]) {
     if (item && item.id) usedIds.add(item.id);
   }
-  const models = [];
+
+  const remotes = [];
   const seenUids = new Set();
   for (const remote of remoteModels) {
     const uid = remote && typeof remote.uid === "string" ? remote.uid : "";
     if (!uid || seenUids.has(uid)) continue;
     seenUids.add(uid);
-    const existing = byUid.get(uid);
-    models.push(existing || modelFromSketchfab(remote, usedIds));
+    remotes.push(remote);
   }
+
+  const matchedLocal = new Set();
+  const models = [];
+  const unmatchedRemote = [];
+
+  for (const remote of remotes) {
+    const existing = byUid.get(remote.uid);
+    if (existing) {
+      matchedLocal.add(existing);
+      models.push(applyRemoteModel(existing, remote));
+    } else {
+      unmatchedRemote.push(remote);
+    }
+  }
+
+  const leftoverByTitle = new Map();
+  for (const item of localModels) {
+    if (!item || matchedLocal.has(item) || seenUids.has(item.sketchfab)) continue;
+    const key = norm(item.title);
+    if (!key) continue;
+    leftoverByTitle.set(key, leftoverByTitle.has(key) ? null : item);
+  }
+
+  for (const remote of unmatchedRemote) {
+    const cleaned = cleanModelTitle(rawSketchfabName(remote));
+    const reuse = leftoverByTitle.get(norm(cleaned));
+    if (reuse) {
+      leftoverByTitle.delete(norm(cleaned));
+      models.push(applyRemoteModel(reuse, remote));
+    } else {
+      models.push(modelFromSketchfab(remote, usedIds));
+    }
+  }
+
   return {
     ...packaged,
     models,
@@ -759,8 +868,11 @@ function mergeCatalog(packaged, remoteModels) {
   };
 }
 
-function uidKey(models) {
-  return (models || []).map((item) => item.sketchfab || "").filter(Boolean).sort().join("\n");
+function catalogFingerprint(models) {
+  return (models || [])
+    .map((item) => `${item.sketchfab || ""}\t${item.title || ""}\t${item.sketchfabName || ""}`)
+    .sort()
+    .join("\n");
 }
 
 function publishCatalog(source) {
@@ -982,14 +1094,15 @@ async function refreshFromSketchfab() {
     const remote = await fetchSketchfabModels();
     if (!remote.length) return;
     const merged = mergeCatalog(packagedCollection, remote);
-    if (uidKey(merged.models) === uidKey(packagedCollection.models)) return;
-    const added = merged.models.filter((item) => !(packagedCollection.models || []).some((local) => local.sketchfab === item.sketchfab));
-    const removed = (packagedCollection.models || []).filter((item) => !merged.models.some((next) => next.sketchfab === item.sketchfab));
+    const previous = liveModels || packagedCollection.models;
+    if (catalogFingerprint(merged.models) === catalogFingerprint(previous)) return;
+    const added = merged.models.filter((item) => !(previous || []).some((local) => local.sketchfab === item.sketchfab));
+    const removed = (previous || []).filter((item) => !merged.models.some((next) => next.sketchfab === item.sketchfab));
     liveModels = merged.models;
     publishCatalog("models");
     console.info(
-      `Sketchfab collection updated. ${added.length} added, ${removed.length} removed.`,
-      added.map((item) => item.title),
+      `Sketchfab collection updated. ${merged.models.length} models, ${added.length} added, ${removed.length} removed.`,
+      merged.models.map((item) => item.title),
     );
   } catch (error) {
     console.warn("Sketchfab collection was not refreshed. Showing the models saved with this folder.", error);
