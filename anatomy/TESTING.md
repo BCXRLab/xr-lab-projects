@@ -49,7 +49,9 @@ Videos in that playlist show up as cards. A video added there appears on refresh
 - Keep typing. `Al` stays on Aluminum. `kid` finds the kidney. `lung` and `LUNGS` find the same lung-related models. `ca` stays on Cardio-Pulmonary Model. Heart models stay hidden for `ca`; they show up for `heart`, `cardiac`, or `cardio`.
 - Click a card. A popup should open with the Sketchfab model. Escape, the X, or the dark background closes it.
 - From http://127.0.0.1:8094/, open Animations. While online, Smoking and Emphysema Animation and Stages of Liver Damage should be there. Click one. The popup should play that YouTube video.
+- Tab from the top of the page. The first control is Skip to collection. The second is Skip to accessibility settings, which opens the gear panel.
 - The gear at the top right opens accessibility settings. Text size, extra line spacing, readable font, high contrast, reduce motion, and stronger focus should change the page and stay set after a refresh. Links stay underlined, including the footer Sketchfab link and Open on Sketchfab or Watch on YouTube in a popup. Reset returns the choices to the start. Escape or a click outside the panel closes it. Arrow keys move between the text sizes.
+- A popup always has a short text description under the viewer, plus Open on Sketchfab or Watch on YouTube.
 - A link such as http://127.0.0.1:8094/#copd should open that model directly.
 
 The 3D viewer and the YouTube animations need an internet connection. Checking Sketchfab and the YouTube playlist needs one too. The packed model list still shows without it.

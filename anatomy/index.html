@@ -10,10 +10,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=15">
+  <script>
+    (function () {
+      try {
+        var s = JSON.parse(localStorage.getItem("anatomy-a11y") || "null") || {};
+        var h = document.documentElement;
+        h.dataset.text = s.text === "lg" || s.text === "xl" ? s.text : "md";
+        var contrast = typeof s.contrast === "boolean" ? s.contrast : window.matchMedia("(prefers-contrast: more)").matches;
+        var motion = typeof s.motion === "boolean" ? s.motion : window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        h.dataset.contrast = contrast ? "high" : "default";
+        h.dataset.motion = motion ? "reduce" : "allow";
+        h.dataset.focus = s.focus ? "strong" : "default";
+        h.dataset.spacing = s.spacing ? "extra" : "normal";
+        h.dataset.font = s.font ? "readable" : "default";
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <a class="skip" href="#catalog">Skip to collection</a>
+  <a class="skip skip--a11y" href="#a11y-toggle">Skip to accessibility settings</a>
+  <div id="a11y-live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
   <div class="wrap">
     <header class="top">
       <a class="brand" href="#models">
@@ -35,9 +53,9 @@
           </svg>
           <span class="sr-only">Accessibility settings</span>
         </button>
-        <div id="a11y-panel" class="a11y-panel" role="region" aria-labelledby="a11y-label" hidden>
+        <div id="a11y-panel" class="a11y-panel" role="region" aria-labelledby="a11y-label" aria-describedby="a11y-note" hidden>
           <p class="a11y-title" id="a11y-label">Accessibility</p>
-          <p class="a11y-note">Links stay underlined so color is not the only cue.</p>
+          <p class="a11y-note" id="a11y-note">Links stay underlined so color is not the only cue. These options apply to this collection page only.</p>
           <div class="a11y-row">
             <span class="a11y-name" id="text-size-label">Text size</span>
             <div class="a11y-choices" role="radiogroup" aria-labelledby="text-size-label">
@@ -121,6 +139,6 @@
   </div>
 
   <script src="data/collection.js?v=12"></script>
-  <script src="app.js?v=15"></script>
+  <script src="app.js?v=16"></script>
 </body>
 </html>

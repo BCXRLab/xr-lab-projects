@@ -2,7 +2,7 @@ const grid = document.querySelector("#grid");
 const emptyEl = document.querySelector("#empty");
 const statusEl = document.querySelector("#status");
 const pageWrap = document.querySelector(".wrap");
-const skipLink = document.querySelector(".skip");
+const skipLinks = document.querySelectorAll(".skip");
 const crossEl = document.querySelector("#cross");
 const heading = document.querySelector("#heading");
 const searchForm = document.querySelector("#search-form");
@@ -302,6 +302,11 @@ function usefulDescription(item) {
   return item.description;
 }
 
+function withCaptionPolicy(url) {
+  if (!url || /[?&]cc_load_policy=/.test(url)) return url;
+  return `${url}${url.includes("?") ? "&" : "?"}cc_load_policy=1`;
+}
+
 function fillModal(item) {
   const related = (item.related || []).map(findItem).filter(Boolean);
   const description = usefulDescription(item);
@@ -312,10 +317,13 @@ function fillModal(item) {
     ? (item.youtube ? `https://www.youtube.com/watch?v=${encodeURIComponent(item.youtube)}` : "")
     : (item.viewerUrl || "");
   const externalLabel = item.kind === "animation" ? "Watch on YouTube" : "Open on Sketchfab";
+  const textAlt = description || (item.kind === "animation"
+    ? `${item.title} is a video in this collection. Play it in the viewer, or use Watch on YouTube.`
+    : `${item.title} is a 3D model in this collection. Explore it in the viewer, or open it on Sketchfab.`);
   let viewer = "";
   if (item.kind === "animation") {
     if (item.embed) {
-      viewer = `<iframe title="${escapeAttr(item.title)}" src="${escapeAttr(item.embed)}" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+      viewer = `<iframe title="${escapeAttr(item.title)}" src="${escapeAttr(withCaptionPolicy(item.embed))}" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
     } else if (item.video) {
       viewer = `<video controls playsinline src="${escapeAttr(item.video)}"></video>`;
     } else {
@@ -332,7 +340,7 @@ function fillModal(item) {
     ${showSource ? `<p class="modal-source">Sketchfab: ${escapeHtml(item.sketchfabName)}</p>` : ""}
     ${showAuthor ? `<p class="modal-source">YouTube: ${escapeHtml(item.youtubeAuthor)}</p>` : ""}
     <div class="viewer">${viewer}</div>
-    ${description ? `<p class="modal-desc">${escapeHtml(description)}</p>` : ""}
+    <p class="modal-desc">${escapeHtml(textAlt)}</p>
     ${(item.tags || []).length ? `<ul class="tags">${item.tags.map((tag) => `<li>${escapeHtml(tag)}</li>`).join("")}</ul>` : ""}
     ${related.length ? `<div class="related"><span>Related</span>${related.map((entry) => {
       const verb = entry.kind === "animation" ? "Watch" : "View model";
@@ -355,7 +363,7 @@ function setModalOpen(open) {
   modal.hidden = !open;
   document.body.classList.toggle("modal-open", open);
   pageWrap.inert = open;
-  skipLink.inert = open;
+  skipLinks.forEach((link) => { link.inert = open; });
 }
 
 function clearModal() {
@@ -535,6 +543,13 @@ function applyA11y(settings) {
   reflectA11y(settings);
 }
 
+function announceA11y(msg) {
+  const el = document.getElementById("a11y-live");
+  if (!el) return;
+  el.textContent = "";
+  requestAnimationFrame(() => { el.textContent = msg; });
+}
+
 function setA11yOpen(open) {
   a11yToggle.setAttribute("aria-expanded", String(open));
   a11yPanel.hidden = !open;
@@ -576,6 +591,7 @@ a11yPanel.addEventListener("click", (event) => {
   }
   saveA11y(a11ySettings);
   applyA11y(a11ySettings);
+  announceA11y("Accessibility settings updated.");
 });
 
 a11yReset.addEventListener("click", () => {
@@ -586,7 +602,16 @@ a11yReset.addEventListener("click", () => {
   }
   a11ySettings = a11yBase();
   applyA11y(a11ySettings);
+  announceA11y("Accessibility settings restored to defaults.");
 });
+
+const skipA11y = document.querySelector('a[href="#a11y-toggle"]');
+if (skipA11y) {
+  skipA11y.addEventListener("click", (event) => {
+    event.preventDefault();
+    setA11yOpen(true);
+  });
+}
 
 document.addEventListener("click", (event) => {
   if (a11yPanel.hidden || event.target.closest(".a11y")) return;
