@@ -16,6 +16,7 @@
       underlineLinks: true,
       extraSpacing: false,
       chromeHidden: false,
+      hideShortcut: true,
       v: 2,
     };
   }
@@ -77,6 +78,7 @@
     readableFont: 'a11y-font',
     underlineLinks: 'a11y-links',
     extraSpacing: 'a11y-space',
+    hideShortcut: 'a11y-hide-key',
   };
 
   function paint() {
@@ -97,6 +99,11 @@
       tab.setAttribute('aria-hidden', s.chromeHidden ? 'false' : 'true');
       tab.tabIndex = s.chromeHidden ? 0 : -1;
     }
+    [hideBtn, tab].forEach(function (el) {
+      if (!el) return;
+      if (s.hideShortcut) el.setAttribute('aria-keyshortcuts', 'h');
+      else el.removeAttribute('aria-keyshortcuts');
+    });
   }
 
   function emit(msg) {
@@ -160,9 +167,13 @@
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.code !== 'KeyH' || e.repeat) return;
+    if (!s.hideShortcut) return;
+    if (dlg && dlg.open) return;
+    if (e.repeat || e.ctrlKey || e.altKey || e.metaKey) return;
+    if (e.key !== 'h' && e.key !== 'H') return;
     const tag = e.target && e.target.tagName;
     if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA' || (e.target && e.target.isContentEditable)) return;
+    e.preventDefault();
     setChromeHidden(!s.chromeHidden);
   });
 

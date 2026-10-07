@@ -16,6 +16,7 @@
   --fountain-light: #afe6fa;
   --fountain-xlight: #dcf2fa;
   --focus: #0055b8;
+  --ui-border: #667085;
   --radius: 12px;
   --shadow: 0 12px 32px rgba(22, 47, 87, 0.12);
   --font: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -140,7 +141,11 @@ a:focus-visible {
   justify-content: space-between;
   gap: 0.75rem 1.5rem;
   min-height: 4.5rem;
-  padding: 0.65rem 0;
+  padding: 0.65rem 5.75rem 0.65rem 0;
+}
+
+html.a11y-chrome-hidden .site-header__inner {
+  padding-right: 2.75rem;
 }
 
 .brand {
@@ -389,7 +394,7 @@ h2 {
   padding: 1.15rem 1.15rem 1.15rem 4.1rem;
   background: var(--white);
   border-radius: var(--radius);
-  border: 1px solid var(--gray-light);
+  border: 1px solid var(--ui-border);
   box-shadow: 0 6px 18px rgba(22, 47, 87, 0.06);
 }
 
@@ -461,7 +466,7 @@ h2 {
   min-height: 16.5rem;
   padding: 1.25rem 1.3rem 1.2rem;
   background: var(--white);
-  border: 1px solid var(--gray-light);
+  border: 1px solid var(--ui-border);
   border-left: 6px solid var(--bc-fountain-blue);
   border-radius: 14px;
   box-shadow: var(--shadow);
@@ -720,11 +725,20 @@ h2 {
   .brand__mark,
   .how-steps li::before,
   .badge {
-    forced-color-adjust: none;
+    background: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonText;
+    box-shadow: none;
   }
 
   .project-card,
-  .btn {
+  .how-steps li,
+  .btn,
+  .a11y-fab,
+  .a11y-tab,
+  #a11y-settings,
+  #a11y-settings fieldset,
+  .a11y-actions button {
     border: 2px solid CanvasText;
   }
 
@@ -732,6 +746,19 @@ h2 {
   .site-footer,
   .site-header {
     background: Canvas;
+    color: CanvasText;
+    background-image: none;
+  }
+
+  .hero h1,
+  .lede,
+  .eyebrow,
+  .hero-facts__value,
+  .hero-facts__label,
+  .site-footer h2,
+  .site-footer p,
+  .site-footer li,
+  .site-footer a {
     color: CanvasText;
   }
 }
@@ -753,7 +780,7 @@ h2 {
   margin: 0;
   padding: 0.4rem 0.7rem;
   border-radius: 10px;
-  border: 1px solid var(--gray-light);
+  border: 1px solid var(--ui-border);
   background: var(--white);
   color: var(--bc-brutus-blue);
   font: inherit;
@@ -783,7 +810,7 @@ h2 {
   min-height: 44px;
   margin: 0;
   padding: 0.65rem 0.55rem;
-  border: 1px solid var(--gray-light);
+  border: 1px solid var(--ui-border);
   border-right: 0;
   border-radius: 10px 0 0 10px;
   background: var(--white);
@@ -808,7 +835,7 @@ html.a11y-chrome-hidden .a11y-tab {
 }
 
 #a11y-settings {
-  border: 1px solid var(--gray-light);
+  border: 1px solid var(--ui-border);
   border-radius: 14px;
   background: var(--white);
   color: var(--gray-dark);
@@ -835,7 +862,7 @@ html.a11y-chrome-hidden .a11y-tab {
 }
 
 #a11y-settings fieldset {
-  border: 1px solid var(--gray-light);
+  border: 1px solid var(--ui-border);
   border-radius: 10px;
   margin: 0 0 0.75rem;
   padding: 0.4rem 0.85rem 0.65rem;
@@ -857,9 +884,10 @@ html.a11y-chrome-hidden .a11y-tab {
 }
 
 .a11y-check input {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
   flex: none;
+  accent-color: var(--bc-brutus-blue);
 }
 
 .a11y-actions {
@@ -874,7 +902,7 @@ html.a11y-chrome-hidden .a11y-tab {
   min-width: 44px;
   padding: 0.4rem 0.9rem;
   border-radius: 8px;
-  border: 1px solid var(--gray-light);
+  border: 1px solid var(--ui-border);
   background: var(--gray-xxlight);
   color: var(--bc-brutus-blue);
   font: inherit;
@@ -893,7 +921,7 @@ html.a11y-large-text {
 }
 
 html.a11y-readable {
-  --font: "Comic Sans MS", "Atkinson Hyperlegible", "Segoe UI", sans-serif;
+  --font: "Atkinson Hyperlegible", Verdana, "Segoe UI", sans-serif;
   letter-spacing: 0.03em;
   word-spacing: 0.06em;
 }
@@ -901,6 +929,12 @@ html.a11y-readable {
 html.a11y-underline a {
   text-decoration: underline;
   text-underline-offset: 0.18em;
+}
+
+html.a11y-underline a.btn,
+html.a11y-underline a.card-cta,
+html.a11y-underline a.brand {
+  text-decoration: none;
 }
 
 html.a11y-spacing body {
@@ -932,6 +966,7 @@ html.a11y-high-contrast {
   --gray-xxlight: #fff;
   --link: #0000cc;
   --focus: #000;
+  --ui-border: #000;
   --bc-brutus-blue: #000;
   --bc-rainy-night-blue: #000;
   --bc-fountain-blue: #000;

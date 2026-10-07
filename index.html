@@ -31,9 +31,9 @@
   <a class="skip-link skip-link--second" href="#a11y-settings-btn">Skip to accessibility settings</a>
   <div id="a11y-live" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
 
-  <button type="button" id="a11y-tab" class="a11y-tab">Show accessibility</button>
+  <button type="button" id="a11y-tab" class="a11y-tab" aria-keyshortcuts="h">Show accessibility</button>
   <div id="a11y-chrome" class="a11y-chrome">
-    <button type="button" id="a11y-hide" class="a11y-fab" aria-pressed="false" aria-label="Hide accessibility controls">Hide</button>
+    <button type="button" id="a11y-hide" class="a11y-fab" aria-pressed="false" aria-keyshortcuts="h" aria-label="Hide accessibility controls">Hide</button>
     <button type="button" id="a11y-settings-btn" class="a11y-fab a11y-fab--cog" aria-haspopup="dialog" aria-controls="a11y-settings" aria-expanded="false" aria-label="Open accessibility settings">
       <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
         <path fill="currentColor" d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.03 7.03 0 0 0-1.63-.94l-.36-2.54A.5.5 0 0 0 13.9 2h-3.8a.5.5 0 0 0-.49.42l-.36 2.54c-.59.22-1.14.53-1.63.94l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.48a.5.5 0 0 0 .12.64l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94L2.83 14.16a.5.5 0 0 0-.12.64l1.92 3.32c.14.24.43.34.69.22l2.39-.96c.49.4 1.04.72 1.63.94l.36 2.54c.05.24.25.42.49.42h3.8c.24 0 .44-.18.49-.42l.36-2.54c.59-.22 1.14-.53 1.63-.94l2.39.96c.26.12.55.02.69-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/>
@@ -41,9 +41,9 @@
     </button>
   </div>
 
-  <dialog id="a11y-settings" aria-labelledby="a11y-settings-title" aria-modal="true">
+  <dialog id="a11y-settings" aria-labelledby="a11y-settings-title" aria-describedby="a11y-lead" aria-modal="true">
     <h2 id="a11y-settings-title" tabindex="-1">Accessibility settings</h2>
-    <p class="a11y-lead">These options change this projects page only. Each project has its own controls once you open it.</p>
+    <p id="a11y-lead" class="a11y-lead">These options change this projects page only. Each project has its own controls once you open it.</p>
     <fieldset>
       <legend>Comfort</legend>
       <label class="a11y-check"><input type="checkbox" id="a11y-reduced"> Reduced motion</label>
@@ -55,6 +55,10 @@
       <label class="a11y-check"><input type="checkbox" id="a11y-large"> Larger text</label>
       <label class="a11y-check"><input type="checkbox" id="a11y-font"> Readable font</label>
       <label class="a11y-check"><input type="checkbox" id="a11y-links"> Underline all links</label>
+    </fieldset>
+    <fieldset>
+      <legend>Keyboard</legend>
+      <label class="a11y-check"><input type="checkbox" id="a11y-hide-key"> H hides accessibility controls</label>
     </fieldset>
     <div class="a11y-actions">
       <button type="button" id="a11y-reset">Reset defaults</button>
@@ -149,7 +153,7 @@
               <h3>Wing Chun: Siu Nim Tau</h3>
               <p>Study the Siu Nim Tau form movement by movement with an animated 3D model, timeline, and playback controls.</p>
               <p class="card-actions">
-                <a class="card-cta" href="./wing-chun/">Open project</a>
+                <a class="card-cta" href="./wing-chun/">Open project <span class="visually-hidden">Wing Chun: Siu Nim Tau</span></a>
                 <a class="card-more" href="https://github.com/BCXRLab/xr-lab-projects/blob/main/wing-chun/README.md">Learn More <span class="visually-hidden">about Wing Chun: Siu Nim Tau</span></a>
               </p>
             </article>
@@ -163,7 +167,7 @@
               <h3>Anatomy XR Collection</h3>
               <p>Browse student anatomy models and disease animations from Bellevue College anatomy classes. Search by name, open a 3D model, or play an animation.</p>
               <p class="card-actions">
-                <a class="card-cta" href="./anatomy/">Open project</a>
+                <a class="card-cta" href="./anatomy/">Open project <span class="visually-hidden">Anatomy XR Collection</span></a>
                 <a class="card-more" href="https://github.com/BCXRLab/xr-lab-projects/blob/main/anatomy/README.md">Learn More <span class="visually-hidden">about Anatomy XR Collection</span></a>
               </p>
             </article>
@@ -177,7 +181,7 @@
               <h3>XR Math Plot</h3>
               <p>Plot parametric 3D curves, ride along the path, and explore the graph in the browser or in VR.</p>
               <p class="card-actions">
-                <a class="card-cta" href="./xr-math-plot/">Open project</a>
+                <a class="card-cta" href="./xr-math-plot/">Open project <span class="visually-hidden">XR Math Plot</span></a>
                 <a class="card-more" href="https://github.com/BCXRLab/xr-lab-projects/blob/main/xr-math-plot/README.md">Learn More <span class="visually-hidden">about XR Math Plot</span></a>
               </p>
             </article>
@@ -191,7 +195,7 @@
               <h3>WebXR Accessibility Design</h3>
               <p>Walk a lab of VR accessibility features — contrast, captions, comfort, audio, haptics — on desktop and in headset.</p>
               <p class="card-actions">
-                <a class="card-cta" href="./webxr-accessibility-design/">Open project</a>
+                <a class="card-cta" href="./webxr-accessibility-design/">Open project <span class="visually-hidden">WebXR Accessibility Design</span></a>
                 <a class="card-more" href="https://github.com/BCXRLab/xr-lab-projects/blob/main/webxr-accessibility-design/README.md">Learn More <span class="visually-hidden">about WebXR Accessibility Design</span></a>
               </p>
             </article>
@@ -205,7 +209,7 @@
               <h3>Ocean Acidification Tour</h3>
               <p>A guided 360° tour of ocean acidification — eight rooms, video, student art, and an interactive oyster model.</p>
               <p class="card-actions">
-                <a class="card-cta" href="./ocean-acidification-tour/">Open project</a>
+                <a class="card-cta" href="./ocean-acidification-tour/">Open project <span class="visually-hidden">Ocean Acidification Tour</span></a>
                 <a class="card-more" href="https://github.com/BCXRLab/xr-lab-projects/blob/main/ocean-acidification-tour/README.md">Learn More <span class="visually-hidden">about Ocean Acidification Tour</span></a>
               </p>
             </article>
@@ -219,7 +223,7 @@
               <h3>XR Spatial Maze</h3>
               <p>Walk a full-size maze, remember the layout, then pick the matching miniature. Works on web, desktop, mobile, and VR from one URL.</p>
               <p class="card-actions">
-                <a class="card-cta" href="./xr-spatial-maze/">Open project</a>
+                <a class="card-cta" href="./xr-spatial-maze/">Open project <span class="visually-hidden">XR Spatial Maze</span></a>
                 <a class="card-more" href="https://github.com/BCXRLab/xr-lab-projects/blob/main/xr-spatial-maze/README.md">Learn More <span class="visually-hidden">about XR Spatial Maze</span></a>
               </p>
             </article>
@@ -233,7 +237,7 @@
               <h3>Harlem Renaissance</h3>
               <p>Walk a Harlem apartment and the Cotton Club. Gold markers open stories, films, and documents from the era — desktop, mobile, and VR.</p>
               <p class="card-actions">
-                <a class="card-cta" href="./harlem-renaissance/">Open project</a>
+                <a class="card-cta" href="./harlem-renaissance/">Open project <span class="visually-hidden">Harlem Renaissance</span></a>
                 <a class="card-more" href="https://github.com/BCXRLab/xr-lab-projects/blob/main/harlem-renaissance/README.md">Learn More <span class="visually-hidden">about Harlem Renaissance</span></a>
               </p>
             </article>
