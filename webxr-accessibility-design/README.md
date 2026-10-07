@@ -1,4 +1,4 @@
-# WebXR Accessibility Design
+# WebXR Accessibility Lab
 
 An interactive lab for designing **accessible VR applications**. Walk a ring of feature stations in the desktop browser or in **Enter VR** (WebXR). The same scene and the same settings apply in both modes.
 
