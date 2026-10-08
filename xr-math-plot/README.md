@@ -36,14 +36,15 @@ This folder is the published site. You do not need Node or a local server to try
 
 | Action | Control |
 |--------|---------|
-| Look | Hold **right mouse button** and drag |
+| Look | Hold **right mouse button** and drag, or **arrow keys** |
 | Move | **W A S D** |
 | Sprint | **Shift** |
 | Up / down | **Space** / **Ctrl** |
 | Ride or leave the vehicle | **V** |
 | Stop movement | **Esc** |
+| Hide plot controls | **H** (recovery tab on the right) |
 
-Type in an equation field first if you need the keyboard for math — movement keys are ignored while a text field is focused.
+Type in an equation field first if you need the keyboard for math — movement and look keys are ignored while a text field is focused.
 
 ### VR (WebXR)
 
@@ -104,8 +105,8 @@ You need a successful plot before riding.
 
 The **Grid Cube** resizes the whole plotted world without changing the math.
 
-- **Desktop:** drag toward or away from the cube center. **Reset scale** returns to default.
-- **VR:** open the menu, then pinch/scale the glass cube with two hands.
+- **Desktop:** drag toward or away from the cube center, use **−** / **+**, or the **−** / **+** keys. **Reset scale** returns to default.
+- **VR:** open the menu, then pinch/scale the glass cube with two hands. The same − / + buttons are on the in-headset menu.
 
 Use this when a graph feels too small or too large in the room.
 
@@ -160,6 +161,12 @@ WebXR requires **localhost** or **HTTPS**. GitHub Pages already provides HTTPS.
 3. Add a second segment and match the `t` intervals.
 4. Ride the vehicle, then free-fly around the same curve.
 5. Put on a headset, open the menu, plot, and walk the graph in VR.
+
+---
+
+## Accessibility
+
+The gear in the top-right opens accessibility settings (high contrast, larger text, readable font, extra spacing, underline links, reduced motion). Those choices apply in the browser and in the VR menu. Hide parks the plot panel; press **H** or **Show plot controls** to bring it back. Skip links jump to **Plot curve** and the settings gear. Pointer targets are at least 44×44 px.
 
 ---
 
