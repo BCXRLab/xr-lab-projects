@@ -125,22 +125,26 @@
 
       <div class="player-controls" aria-label="Animation controls">
         <div id="camera-tools" class="camera-tools" aria-label="Camera controls">
-          <div class="camera-group">
-            <span class="camera-label">Rotate</span>
-            <button type="button" class="camera-btn" data-cam="yaw-left" aria-label="Rotate left">Left</button>
-            <button type="button" class="camera-btn" data-cam="yaw-right" aria-label="Rotate right">Right</button>
-            <button type="button" class="camera-btn" data-cam="pitch-up" aria-label="Rotate up">Up</button>
-            <button type="button" class="camera-btn" data-cam="pitch-down" aria-label="Rotate down">Down</button>
-          </div>
-          <div class="camera-group">
-            <span class="camera-label">Zoom</span>
-            <button type="button" class="camera-btn" data-cam="zoom-in" aria-label="Zoom in">In</button>
-            <button type="button" class="camera-btn" data-cam="zoom-out" aria-label="Zoom out">Out</button>
-          </div>
-          <div class="camera-group">
-            <span class="camera-label">Pan</span>
-            <button type="button" class="camera-btn" data-cam="pan-left" aria-label="Pan left">Left</button>
-            <button type="button" class="camera-btn" data-cam="pan-right" aria-label="Pan right">Right</button>
+          <p class="camera-tools-title">Camera</p>
+          <p class="camera-tools-hint">Buttons and keyboard · arrows rotate · + − zoom · Shift+arrows pan</p>
+          <div class="camera-tools-row">
+            <div class="camera-group">
+              <span class="camera-label">Rotate</span>
+              <button type="button" class="camera-btn" data-cam="yaw-left" aria-label="Rotate left">← Left</button>
+              <button type="button" class="camera-btn" data-cam="yaw-right" aria-label="Rotate right">Right →</button>
+              <button type="button" class="camera-btn" data-cam="pitch-up" aria-label="Rotate up">↑ Up</button>
+              <button type="button" class="camera-btn" data-cam="pitch-down" aria-label="Rotate down">↓ Down</button>
+            </div>
+            <div class="camera-group">
+              <span class="camera-label">Zoom</span>
+              <button type="button" class="camera-btn" data-cam="zoom-in" aria-label="Zoom in">+ In</button>
+              <button type="button" class="camera-btn" data-cam="zoom-out" aria-label="Zoom out">− Out</button>
+            </div>
+            <div class="camera-group">
+              <span class="camera-label">Pan</span>
+              <button type="button" class="camera-btn" data-cam="pan-left" aria-label="Pan left">← Left</button>
+              <button type="button" class="camera-btn" data-cam="pan-right" aria-label="Pan right">Right →</button>
+            </div>
           </div>
         </div>
 

@@ -258,6 +258,7 @@ html.a11y-high-contrast .experience-card,
 html.a11y-high-contrast .movement-panel,
 html.a11y-high-contrast .player-controls,
 html.a11y-high-contrast .guide-item,
+html.a11y-high-contrast .camera-group,
 html.a11y-high-contrast .a11y-fab,
 html.a11y-high-contrast .a11y-tab,
 html.a11y-high-contrast #a11y-settings,
@@ -272,7 +273,8 @@ html.a11y-high-contrast .skip-link {
 html.a11y-high-contrast h1,
 html.a11y-high-contrast .brand-name,
 html.a11y-high-contrast .movement-panel h2,
-html.a11y-high-contrast #a11y-settings h2 {
+html.a11y-high-contrast #a11y-settings h2,
+html.a11y-high-contrast .camera-tools-title {
   color: #ffff00;
 }
 
