@@ -51,14 +51,17 @@ This folder is the published site. You do not need Node to play it on GitHub Pag
 | Action | Control |
 |--------|---------|
 | Move | **W A S D** |
-| Look | Hold **right mouse** and drag |
+| Look | Arrow keys, or hold **right mouse** and drag |
 | Turn | **Q / E** |
 | Run | **Shift** |
 | Jump | **Space** |
 | Open a story | Walk to a gold marker, or click it |
 | Close a panel | **×**, click the pin again, or **Esc** |
 | Switch rooms | Bottom **Apartment / Cotton Club** buttons |
-| Hide hints | **H** |
+| Accessibility | Gear (top right) — contrast, text size, readable font, reduced motion |
+| Hide HUD | **H**, or Hide (turn the shortcut off in settings) |
+
+Skip links jump to room navigation and to accessibility settings. The same accessibility settings apply in VR. There is no in-world camera zoom.
 
 ### Phone / tablet
 
