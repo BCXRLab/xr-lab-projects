@@ -175,6 +175,37 @@ model-viewer {
   background: #fff;
 }
 
+.camera-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  align-items: center;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #edf0f2;
+}
+
+.camera-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.camera-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #687985;
+  margin-right: 2px;
+}
+
+.camera-btn {
+  min-width: 44px;
+  min-height: 44px;
+}
+
 .timeline-row {
   display: grid;
   grid-template-columns: 42px 1fr 42px;

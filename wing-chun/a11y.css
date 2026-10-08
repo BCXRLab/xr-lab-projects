@@ -209,7 +209,8 @@ html.a11y-chrome-hidden .a11y-tab { display: inline-flex; }
 button.primary,
 .movement-jump,
 select,
-.a11y-fab {
+.a11y-fab,
+.camera-btn {
   min-height: 44px;
 }
 

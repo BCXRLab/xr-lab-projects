@@ -59,9 +59,9 @@ The current movement is highlighted automatically while the animation plays. Pla
 
 | Action | Control |
 |--------|---------|
-| Rotate | Click + drag (touch drag on phone / tablet) |
-| Zoom | Mouse wheel / scroll (pinch on touch) |
-| Pan | Right-click + drag |
+| Rotate | Click + drag, **Left / Right / Up / Down** buttons, or arrow keys |
+| Zoom | Mouse wheel / pinch, **In / Out** buttons, or **+** **−** |
+| Pan | Right-click + drag, **Left / Right** buttons, or **Shift + arrows** |
 
 ### Playback
 

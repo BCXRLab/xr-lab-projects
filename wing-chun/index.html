@@ -47,7 +47,7 @@
 
   <dialog id="a11y-settings" aria-labelledby="a11y-settings-title">
     <h2 id="a11y-settings-title" tabindex="-1">Accessibility settings</h2>
-    <p class="a11y-lead">These options apply to this page. Playback stays at the original form speed. Use Pause to stop the clip.</p>
+    <p class="a11y-lead">These options apply to this page. Playback stays at the original form speed. Use Pause to stop the clip. Arrow keys rotate the model; + and − zoom; Shift+arrows pan.</p>
     <fieldset>
       <legend>Comfort</legend>
       <label class="a11y-check"><input type="checkbox" id="a11y-reduced"> Reduced motion (hides camera hints; does not slow the form)</label>
@@ -88,9 +88,9 @@
       </div>
 
       <div class="interaction-guide" aria-label="3D model navigation instructions">
-        <div class="guide-item"><span class="guide-icon">↻</span><span><strong>Rotate</strong><small>Click + drag</small></span></div>
-        <div class="guide-item"><span class="guide-icon">＋</span><span><strong>Zoom</strong><small>Scroll</small></span></div>
-        <div class="guide-item"><span class="guide-icon">↔</span><span><strong>Pan</strong><small>Right-click + drag</small></span></div>
+        <div class="guide-item"><span class="guide-icon">↻</span><span><strong>Rotate</strong><small>Drag, buttons, or arrows</small></span></div>
+        <div class="guide-item"><span class="guide-icon">＋</span><span><strong>Zoom</strong><small>Scroll, buttons, or + −</small></span></div>
+        <div class="guide-item"><span class="guide-icon">↔</span><span><strong>Pan</strong><small>Right-drag, buttons, or Shift+arrows</small></span></div>
       </div>
     </header>
 
@@ -124,6 +124,26 @@
       </div>
 
       <div class="player-controls" aria-label="Animation controls">
+        <div id="camera-tools" class="camera-tools" aria-label="Camera controls">
+          <div class="camera-group">
+            <span class="camera-label">Rotate</span>
+            <button type="button" class="camera-btn" data-cam="yaw-left" aria-label="Rotate left">Left</button>
+            <button type="button" class="camera-btn" data-cam="yaw-right" aria-label="Rotate right">Right</button>
+            <button type="button" class="camera-btn" data-cam="pitch-up" aria-label="Rotate up">Up</button>
+            <button type="button" class="camera-btn" data-cam="pitch-down" aria-label="Rotate down">Down</button>
+          </div>
+          <div class="camera-group">
+            <span class="camera-label">Zoom</span>
+            <button type="button" class="camera-btn" data-cam="zoom-in" aria-label="Zoom in">In</button>
+            <button type="button" class="camera-btn" data-cam="zoom-out" aria-label="Zoom out">Out</button>
+          </div>
+          <div class="camera-group">
+            <span class="camera-label">Pan</span>
+            <button type="button" class="camera-btn" data-cam="pan-left" aria-label="Pan left">Left</button>
+            <button type="button" class="camera-btn" data-cam="pan-right" aria-label="Pan right">Right</button>
+          </div>
+        </div>
+
         <div class="timeline-row">
           <span id="currentTime">0:00</span>
           <label class="sr-only" for="timeline">Animation timeline</label>

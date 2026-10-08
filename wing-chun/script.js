@@ -231,3 +231,125 @@ timeline.addEventListener('input', () => {
 
 buildMovementSelect();
 renderMovement(0);
+
+const YAW_STEP = 0.14;
+const PITCH_STEP = 0.1;
+const ZOOM_FACTOR = 0.88;
+const MIN_RADIUS = 0.55;
+const MAX_RADIUS = 12;
+const MIN_PHI = 0.12;
+const MAX_PHI = Math.PI - 0.12;
+
+function cameraReduced() {
+  return document.documentElement.classList.contains('a11y-reduced');
+}
+
+function nudgeOrbit(dTheta, dPhi, radiusScale) {
+  if (!modelViewer.getCameraOrbit) return;
+  const orbit = modelViewer.getCameraOrbit();
+  const theta = orbit.theta + dTheta;
+  const phi = Math.min(MAX_PHI, Math.max(MIN_PHI, orbit.phi + dPhi));
+  const radius = Math.min(MAX_RADIUS, Math.max(MIN_RADIUS, orbit.radius * radiusScale));
+  modelViewer.cameraOrbit = `${theta}rad ${phi}rad ${radius}m`;
+  if (cameraReduced() && typeof modelViewer.jumpCameraToGoal === 'function') {
+    modelViewer.jumpCameraToGoal();
+  }
+}
+
+function panCamera(screenX, screenZ) {
+  if (!modelViewer.getCameraOrbit || !modelViewer.getCameraTarget) return;
+  const orbit = modelViewer.getCameraOrbit();
+  const target = modelViewer.getCameraTarget();
+  const step = Math.max(0.04, orbit.radius * 0.045);
+  const theta = orbit.theta;
+  const dx = (screenX * Math.cos(theta) - screenZ * Math.sin(theta)) * step;
+  const dz = (screenX * Math.sin(theta) + screenZ * Math.cos(theta)) * step;
+  modelViewer.cameraTarget = `${target.x + dx}m ${target.y}m ${target.z + dz}m`;
+  if (cameraReduced() && typeof modelViewer.jumpCameraToGoal === 'function') {
+    modelViewer.jumpCameraToGoal();
+  }
+}
+
+function runCamera(action) {
+  switch (action) {
+    case 'yaw-left':
+      nudgeOrbit(YAW_STEP, 0, 1);
+      break;
+    case 'yaw-right':
+      nudgeOrbit(-YAW_STEP, 0, 1);
+      break;
+    case 'pitch-up':
+      nudgeOrbit(0, -PITCH_STEP, 1);
+      break;
+    case 'pitch-down':
+      nudgeOrbit(0, PITCH_STEP, 1);
+      break;
+    case 'zoom-in':
+      nudgeOrbit(0, 0, ZOOM_FACTOR);
+      break;
+    case 'zoom-out':
+      nudgeOrbit(0, 0, 1 / ZOOM_FACTOR);
+      break;
+    case 'pan-left':
+      panCamera(-1, 0);
+      break;
+    case 'pan-right':
+      panCamera(1, 0);
+      break;
+    default:
+      break;
+  }
+}
+
+function bindHold(button) {
+  let timer = 0;
+  const action = button.getAttribute('data-cam');
+  const start = (e) => {
+    if (e.button != null && e.button !== 0) return;
+    e.preventDefault();
+    runCamera(action);
+    window.clearInterval(timer);
+    timer = window.setInterval(() => runCamera(action), 90);
+  };
+  const stop = () => {
+    window.clearInterval(timer);
+    timer = 0;
+  };
+  button.addEventListener('pointerdown', start);
+  button.addEventListener('pointerup', stop);
+  button.addEventListener('pointerleave', stop);
+  button.addEventListener('pointercancel', stop);
+  button.addEventListener('blur', stop);
+}
+
+document.querySelectorAll('.camera-btn').forEach(bindHold);
+
+function cameraKeyTargetBlocked(el) {
+  if (!el) return false;
+  const tag = el.tagName;
+  if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA' || el.isContentEditable) return true;
+  if (el.closest && el.closest('#a11y-settings')) return true;
+  return false;
+}
+
+window.addEventListener('keydown', (e) => {
+  if (cameraKeyTargetBlocked(e.target)) return;
+  const dlg = document.getElementById('a11y-settings');
+  if (dlg && dlg.open) return;
+
+  const shift = e.shiftKey;
+  let action = '';
+  if (shift && e.code === 'ArrowLeft') action = 'pan-left';
+  else if (shift && e.code === 'ArrowRight') action = 'pan-right';
+  else if (e.code === 'ArrowLeft') action = 'yaw-left';
+  else if (e.code === 'ArrowRight') action = 'yaw-right';
+  else if (e.code === 'ArrowUp') action = 'pitch-up';
+  else if (e.code === 'ArrowDown') action = 'pitch-down';
+  else if (e.code === 'Equal' || e.code === 'NumpadAdd') action = 'zoom-in';
+  else if (e.code === 'Minus' || e.code === 'NumpadSubtract') action = 'zoom-out';
+
+  if (!action) return;
+  e.preventDefault();
+  runCamera(action);
+});
+
