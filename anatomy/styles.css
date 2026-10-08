@@ -278,17 +278,11 @@ body.modal-open { overflow: hidden; }
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 46px;
   height: 46px;
   flex: none;
-  background: #16315f;
-  color: #fff;
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  border-radius: 8px;
+  object-fit: contain;
 }
 
 .brand-name,
@@ -724,11 +718,6 @@ html[data-contrast="high"] {
 }
 
 html[data-contrast="high"] body { background: #fff; }
-
-html[data-contrast="high"] .brand-mark {
-  background: #0b1220;
-  color: #fff;
-}
 
 html[data-contrast="high"] .brand-sub,
 html[data-contrast="high"] .search .hint,
