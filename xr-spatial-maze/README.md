@@ -67,8 +67,8 @@ Levels: **1** has five mazes, **2** has three, **3** has three. Each round picks
 | Look | Hold **right mouse** and drag, or **arrow keys** |
 | Run | **Shift** |
 | Jump | **Space** |
-| Select a panel | **Left click** or **F** |
-| Hide hints | **H** |
+| Select a panel | **Left click** or **F**, or the **Level select** strip |
+| Hide maze controls | **H** (recovery tab on the right) |
 | Music on / off | Speaker icon, bottom-left |
 
 ### Phone / tablet
@@ -105,6 +105,12 @@ Gameplay UI is in the world so mouse, touch, and controller rays all hit the sam
 | **Same URL everywhere** | Laptop, phone, and headset share one HTTPS link. |
 | **World-space menus** | Level pick, match, retry, and next are 3D panels in the start zone. |
 | **Music on / off** | Speaker icon on the canvas turns the Kosatka loop off. Game sounds stay on. The choice is saved in the browser. |
+
+---
+
+## Accessibility
+
+The gear in the top-right opens accessibility settings (high contrast, larger text, readable font, extra spacing, underline links, reduced motion). Those choices apply in the browser and in VR. **Level select** in the HUD is a keyboard path for picking a level, cycling minis, and retry/exit. Hide parks the HUD; press **H** or **Show maze controls** to bring it back. Skip links jump to level select and the settings gear. Pointer targets are at least 44×44 px. There is no in-world camera zoom.
 
 ---
 
