@@ -6,10 +6,78 @@
   <meta name="description" content="Interactive 3D learning resource for the Wing Chun Siu Nim Tau form." />
   <title>Wing Chun: Siu Nim Tau</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="a11y.css" />
+  <script>
+    (function () {
+      try {
+        var s = JSON.parse(localStorage.getItem('wing-chun-a11y') || 'null') || {};
+        var h = document.documentElement;
+        var reduced = s.reducedFollowOs === false
+          ? !!s.reducedMotion
+          : window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var contrast = s.contrastFollowOs === false
+          ? !!s.highContrast
+          : window.matchMedia('(prefers-contrast: more)').matches;
+        if (reduced) h.classList.add('a11y-reduced');
+        if (contrast) h.classList.add('a11y-high-contrast');
+        if (s.largeText) h.classList.add('a11y-large-text');
+        if (s.readableFont) h.classList.add('a11y-readable');
+        if (s.underlineLinks !== false) h.classList.add('a11y-underline');
+        if (s.extraSpacing) h.classList.add('a11y-spacing');
+        if (s.chromeHidden) h.classList.add('a11y-chrome-hidden');
+      } catch (e) {}
+    })();
+  </script>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
 </head>
 <body>
+  <a href="#playButton" class="skip-link">Skip to playback controls</a>
+  <a href="#a11y-settings-btn" class="skip-link skip-link--second">Skip to accessibility settings</a>
+  <div id="a11y-announcer" class="sr-only" role="status" aria-live="polite"></div>
+
+  <div class="a11y-chrome">
+    <button type="button" id="a11y-hide" class="a11y-fab" aria-pressed="false">Hide</button>
+    <button type="button" id="a11y-settings-btn" class="a11y-fab a11y-fab--cog" aria-haspopup="dialog" aria-controls="a11y-settings" aria-expanded="false" aria-label="Open accessibility settings">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="currentColor" d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.5.5 0 0 0 .12-.64l-1.92-3.32a.5.5 0 0 0-.6-.22l-2.39.96a7.03 7.03 0 0 0-1.63-.94l-.36-2.54a.5.5 0 0 0-.5-.42h-3.84a.5.5 0 0 0-.5-.42l-.36 2.54c-.59.24-1.13.55-1.63.94l-2.39-.96a.5.5 0 0 0-.6.22L2.71 8.84a.5.5 0 0 0 .12.64l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94L2.83 14.52a.5.5 0 0 0-.12.64l1.92 3.32c.13.22.4.31.64.22l2.39-.96c.5.39 1.04.7 1.63.94l.36 2.54c.05.24.26.42.5.42h3.84c.24 0 .45-.18.5-.42l.36-2.54c.59-.24 1.13-.55 1.63-.94l2.39.96c.24.09.51 0 .64-.22l1.92-3.32a.5.5 0 0 0-.12-.64l-2.03-1.58zM12 15.6A3.6 3.6 0 1 1 12 8.4a3.6 3.6 0 0 1 0 7.2z"/>
+      </svg>
+    </button>
+  </div>
+  <button type="button" id="a11y-tab" class="a11y-tab" tabindex="-1" aria-hidden="true">Show page controls</button>
+
+  <dialog id="a11y-settings" aria-labelledby="a11y-settings-title">
+    <h2 id="a11y-settings-title" tabindex="-1">Accessibility settings</h2>
+    <p class="a11y-lead">These options apply to this page. Playback stays at the original form speed. Use Pause to stop the clip.</p>
+    <fieldset>
+      <legend>Comfort</legend>
+      <label class="a11y-check"><input type="checkbox" id="a11y-reduced"> Reduced motion (hides camera hints; does not slow the form)</label>
+      <label class="a11y-check"><input type="checkbox" id="a11y-space"> Extra spacing</label>
+    </fieldset>
+    <fieldset>
+      <legend>Display</legend>
+      <label class="a11y-check"><input type="checkbox" id="a11y-contrast"> High contrast</label>
+      <label class="a11y-check"><input type="checkbox" id="a11y-large"> Larger text</label>
+      <label class="a11y-check"><input type="checkbox" id="a11y-font"> Readable font</label>
+      <label class="a11y-check"><input type="checkbox" id="a11y-links"> Underline all links</label>
+    </fieldset>
+    <fieldset>
+      <legend>Keyboard</legend>
+      <label class="a11y-check"><input type="checkbox" id="a11y-hide-key"> H hides page controls</label>
+    </fieldset>
+    <div class="a11y-actions">
+      <button type="button" id="a11y-reset">Reset defaults</button>
+      <button type="button" id="a11y-close">Close</button>
+    </div>
+  </dialog>
+
   <main class="app-shell">
+    <a class="brand" href="../">
+      <img class="brand-mark" src="assets/xr-lab-logo.png" width="46" height="46" alt="">
+      <span>
+        <span class="brand-name">XR LAB</span>
+        <span class="brand-sub">Bellevue College</span>
+      </span>
+    </a>
     <header class="page-header">
       <div class="intro-copy">
         <p class="eyebrow">Interactive 3D Learning Resource</p>
@@ -80,6 +148,7 @@
     </section>
   </main>
 
+  <script src="a11y.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -71,6 +71,10 @@ The current movement is highlighted automatically while the animation plays. Pla
 | Previous / next movement | **Previous** · **Next** |
 | Scrub the form | Drag the timeline |
 | Jump to a named movement | **Jump to movement** dropdown, or a nearby-movement button |
+| Accessibility | Gear (top right) — contrast, text size, readable font, reduced motion |
+| Hide page chrome | **H**, or Hide (turn the shortcut off in settings) |
+
+Skip links jump to playback controls and to accessibility settings. Playback stays at the original form speed; Pause stops the clip.
 
 ---
 
