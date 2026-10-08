@@ -47,8 +47,10 @@ A skip link at the top jumps to the settings panel. The same settings apply in V
 | Snap or smooth turn | Right thumbstick (depends on **Turn mode**) |
 | Select | Trigger |
 | Teleport (if enabled) | Trigger while aiming |
+| Settings menu | **B** / **Y** (upper face button) toggles the menu on that controller |
+| Find the menu | Look at a controller — a **Menu** label appears while it is closed |
 
-Settings you change on desktop carry into the VR session for that visit.
+The other controller’s ray and trigger click rows (same toggles as the desktop panel). Settings persist in this browser and apply in both desktop and VR.
 
 ---
 
