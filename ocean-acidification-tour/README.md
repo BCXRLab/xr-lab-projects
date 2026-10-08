@@ -44,8 +44,10 @@ This folder is the published site. You do not need Node or a local server to try
 | Next / previous room | Room buttons in the HUD |
 | Close a panel | **Esc** or the panel **×** |
 | Keyboard | **Tab** through room and content controls · **Enter** to activate |
+| Accessibility | Gear (top right) — contrast, text size, readable font, reduced motion |
+| Hide HUD | **H**, or Hide (turn the shortcut off in settings) |
 
-Ambient audio can be toggled from the HUD (on by default).
+Skip links jump to room navigation and to accessibility settings. Ambient audio can be toggled from the HUD (on by default). The same accessibility settings apply in VR. The tour is stationary: look and snap only.
 
 ### VR (WebXR)
 
