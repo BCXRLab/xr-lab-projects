@@ -1,0 +1,8 @@
+[
+  { "title": "Classical: Gymnopédie No. 1 (Satie)", "file": "audio/satie-gymnopedie-1.ogg",
+    "credit": "Gymnopédie No. 1 by Erik Satie, performed by Robin Alciatore, courtesy of Musopen (musopen.com). Public domain." },
+  { "title": "Synthwave: Eighties Action (Kevin MacLeod)", "file": "audio/eighties-action.mp3",
+    "credit": "\"Eighties Action\" Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 3.0. https://creativecommons.org/licenses/by/3.0/" },
+  { "title": "Electronic: EDM Detection Mode (Kevin MacLeod)", "file": "audio/edm-detection-mode.mp3",
+    "credit": "\"EDM Detection Mode\" Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 3.0. https://creativecommons.org/licenses/by/3.0/" }
+]
